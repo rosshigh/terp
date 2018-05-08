@@ -1,0 +1,81 @@
+<template>
+    <div show.bind="tool === 'filesDiv'">
+		<h1>Administration</h1>
+		<div class="row" style="margin-left:20px;">
+			<div class="col col-lg-3">
+				<h3>Files</h3>
+				<div class="form-group">
+					<input type="text" class="form-control" value.bind="filesModule.selectedFile.name" placeholder="Name" />
+				</div>
+				<div class="form-group">
+					<select value.bind="filesModule.selectedFile.type" class="form-control">
+						<option value="QUIZ">Quiz</option>
+						<option value="KEY">Quiz Key</option>
+						<option value="IMAGE">Image</option>
+						<option value="NOTES">PowerPoint</option>
+						<option value="REVIEW">Review</option>
+						<option value="VIDEO">Videos</option>
+					</select>
+				</div>
+				<div class="col-lg-12">
+					<label class="btn btn-primary">
+							Browse for files&hellip; <input type="file" style="display: none;" change.delegate="changeFiles()" files.bind="files">
+					</label>
+				</div>
+				<div class="form-group">
+					<li show.bind="filesToUpload && filesToUpload[0]" class="list-group-item">${filesToUpload[0].name}<span click.delegate="removeFile(0)" class="pull-right"><i class="fa fa-trash" aria-hidden="true"></i></span></li>
+				</div>
+				<div class="form-group">
+					<Button class="form-control" click.trigger="save()">Save</Button>
+				</div>
+			</div>
+			<div class="col col-lg-9">
+				<div class="form-group col-lg-3">
+					<select value.bind="selectedType" class="form-control" change.trigger="filterList()">
+						<option value=""></option>					
+						<option value="QUIZ">Quiz</option>
+						<option value="KEY">Quiz Key</option>
+						<option value="IMAGE">Image</option>
+						<option value="NOTES">PowerPoint</option>
+						<option value="REVIEW">Review</option>
+						<option value="VIDEO">Videos</option>
+					</select>
+				</div>
+				<div class="row"  style="margin-left:20px;">
+					<div class="col col-lg-6">
+						<li repeat.for="doc of filesModule.filteredList" click.trigger="selectDoc(doc)" class="list-group-item">${doc.name}<span click.delegate="removeDocument(doc)" class="pull-right"><i class="fa fa-trash" aria-hidden="true"></i></span></li>
+					</div>
+					<div show.bind="filesModule.selectedFile && filesModule.selectedFile.name && docSelected" class="col col-lg-6">
+						<div class="form-group">
+							<input class="form-control" value.bind="filesModule.selectedFile.name" />
+						</div>
+						<div class="form-group">
+							<select value.bind="filesModule.selectedFile.type" class="form-control">
+								<option value ="QUIZ">Quiz</option>
+								<option value="KEY">Quiz Key</option>
+								<option value="IMAGE">Image</option>
+								<option value="NOTES">PowerPoint</option>
+								<option value="REVIEW">Review</option>
+								<option value="VIDEO">Videos</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<a href="/uploads/${filesModule.selectedFile.type}/${filesModule.selectedFile.file.fileName}" target="_blank">${filesModule.selectedFile.file.fileName}</a>
+						</div>
+						<div class="col-lg-12">
+							<label class="btn btn-primary">
+									Browse for files&hellip; <input type="file" style="display: none;" change.delegate="changeFiles()" files.bind="files">
+							</label>
+						</div>
+						<div class="form-group">
+							<li show.bind="filesToUpload && filesToUpload[0]" class="list-group-item">${filesToUpload[0].name}<span click.delegate="removeFile(0)" class="pull-right"><i class="fa fa-trash" aria-hidden="true"></i></span></li>
+						</div>
+						<div class="form-group">
+							<Button class="form-control" click.trigger="save()">Save</Button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

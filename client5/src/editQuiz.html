@@ -1,0 +1,42 @@
+<template>
+    <div show.bind="tool === 'quizDiv'">
+		<div class="row" style="margin-top:40px;margin-left:20px;">
+            
+			<div class="col col-lg-3">
+				<h3>Units</h3>
+				<div class="form-group">
+					<input type="text" class="form-control" value.bind="filesModule.selectedQuiz.name" placeholder="Name" />
+				</div>
+				<div class="form-group">
+					<Button class="form-control" click.trigger="saveQuiz()">Save</Button>
+                </div>
+               
+				<ul>
+					<li style="background-color:${quiz._id === filesModule.selectedQuiz._id ? 'cyan' : 'white'}" repeat.for="quiz of filesModule.quizzesArray" click.trigger="selectQuiz(quiz)" class="list-group-item">${quiz.name}<span click.delegate="removeQuiz(quiz)" class="pull-right"><i class="fa fa-trash" aria-hidden="true"></i></span></li>
+                </ul>
+                 
+            </div>
+     
+			<div show.bind="filesModule.selectedQuiz._id">
+				<div style="margin-bottom: 20px;">
+					<button class="btn btn-primary" click.trigger="toggleQuestions()">Edit/New</button>
+					<button show.bind="!showQuestions" class="btn btn-primary" click.trigger="saveQuestion()">Save</button>
+					<button show.bind="showQuestions" class="btn btn-primary" click.trigger="deleteQuestion()">Delete</button>
+					<div class="row float-right" show.bind="showQuestions">
+						<button disable.bind="qustionIndex === 0" class="btn btn-primary" click.trigger="nextQuestion(-1)">Previous</button>
+						<button style="margin-left:10px;" disable.bind="questionIndex === filesModule.questionArray.length - 1" class="btn btn-primary" click.trigger="nextQuestion(1)">Next</button>
+					</div>
+				</div>
+				
+				<div>
+					<editor  toolbar.bind="toolbar" value.bind="filesModule.selectedQuestion.flash" height="250"></editor>
+					<div style="margin-top:20px;">
+						<editor css="margin-top:20px;" toolbar.bind="toolbar" value.bind="filesModule.selectedQuestion.card" height="250"></editor>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+
+	</div>
+</template>

@@ -757,6 +757,7 @@ define('resources/data/files',['exports', 'aurelia-framework', './data-services'
 
 		Files.prototype.saveFile = function () {
 			var _ref3 = _asyncToGenerator(regeneratorRuntime.mark(function _callee3() {
+				var response;
 				return regeneratorRuntime.wrap(function _callee3$(_context3) {
 					while (1) {
 						switch (_context3.prev = _context3.next) {
@@ -770,7 +771,7 @@ define('resources/data/files',['exports', 'aurelia-framework', './data-services'
 
 							case 2:
 								if (this.selectedFile._id) {
-									_context3.next = 7;
+									_context3.next = 9;
 									break;
 								}
 
@@ -778,14 +779,17 @@ define('resources/data/files',['exports', 'aurelia-framework', './data-services'
 								return this.data.saveObject(this.selectedFile, "docs", "post");
 
 							case 5:
-								_context3.next = 9;
+								response = _context3.sent;
+
+								this.selectedFile = response;
+								_context3.next = 11;
 								break;
 
-							case 7:
-								_context3.next = 9;
+							case 9:
+								_context3.next = 11;
 								return this.data.saveObject(this.selectedFile, "docs/" + this.selectedFile._id, "put");
 
-							case 9:
+							case 11:
 							case 'end':
 								return _context3.stop();
 						}
@@ -1296,7 +1300,7 @@ define('resources/data/data-services',['exports', 'aurelia-framework', 'aurelia-
             this.http = http;
 
             this.http.configure(function (x) {
-                x.withBaseUrl('http://git.ucc.uwm.edu/');
+                x.withBaseUrl('http:/git.ucc.uwm.edu/');
             });
         }
 

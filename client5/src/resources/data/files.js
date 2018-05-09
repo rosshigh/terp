@@ -66,7 +66,8 @@ export class Files {
         }
 
         if (!this.selectedFile._id) {
-            await this.data.saveObject(this.selectedFile, "docs", "post");
+			let response = await this.data.saveObject(this.selectedFile, "docs", "post");
+			this.selectedFile = response;
         } else {
             await this.data.saveObject(this.selectedFile, "docs/" + this.selectedFile._id, "put");
         }

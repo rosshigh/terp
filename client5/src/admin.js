@@ -45,7 +45,9 @@ export class Admin {
 		if(this.filesModule.selectedFile.name){
 			await this.filesModule.saveFile();
 			this.docSelected = false;
-			if(this.filesToUpload && this.filesToUpload.length) this.filesModule.uploadFile(this.filesToUpload);
+			this.filesModule.selectFile();
+			if(this.filesToUpload && this.filesToUpload.length) await this.filesModule.uploadFile(this.filesToUpload);
+			this.filesToUpload = [];
 		}
 	}
 
@@ -61,7 +63,8 @@ export class Admin {
 	}
 
 	removeDocument(doc){
-		this.filesModule.deleteDoc(doc._id);
+		this.filesModule.deleteDoc(this.filesModule.selectedFile._id);
+		this.filterList();
 	}
 
 	async saveQuiz(){

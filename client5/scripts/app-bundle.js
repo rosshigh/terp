@@ -69,8 +69,8 @@ define('videos',['exports', 'aurelia-framework', './resources/data/files'], func
               case 4:
                 this.filesModule.filteredList.forEach(function (item) {
                   var parts = item.name.split(":");
-                  item.name = parts[0];
-                  _this.units[parseInt(parts[1]) - 1].push(item);
+                  item.name = parts[1];
+                  _this.units[parseInt(parts[0]) - 1].push(item);
                 });
 
               case 5:
@@ -734,7 +734,7 @@ define('resources/data/files',['exports', 'aurelia-framework', './data-services'
 		}();
 
 		Files.prototype.selectFile = function selectFile(index) {
-			if (!index) {
+			if (index === undefined) {
 				this.selectedFile = this.emptyFile();
 			}
 		};
@@ -823,7 +823,7 @@ define('resources/data/files',['exports', 'aurelia-framework', './data-services'
 						switch (_context4.prev = _context4.next) {
 							case 0:
 								if (!id) {
-									_context4.next = 5;
+									_context4.next = 3;
 									break;
 								}
 
@@ -831,10 +831,6 @@ define('resources/data/files',['exports', 'aurelia-framework', './data-services'
 								return this.data.deleteObject("docs/" + id);
 
 							case 3:
-								_context4.next = 5;
-								return this.getDocumentsArray();
-
-							case 5:
 							case 'end':
 								return _context4.stop();
 						}
@@ -2155,7 +2151,7 @@ define('environment',["exports"], function (exports) {
   };
 });
 define('text!editQuiz.html', ['module'], function(module) { module.exports = "<template>\r\n    <div show.bind=\"tool === 'quizDiv'\">\r\n\t\t<div class=\"row\" style=\"margin-top:40px;margin-left:20px;\">\r\n            \r\n\t\t\t<div class=\"col col-lg-3\">\r\n\t\t\t\t<h3>Units</h3>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<input type=\"text\" class=\"form-control\" value.bind=\"filesModule.selectedQuiz.name\" placeholder=\"Name\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<Button class=\"form-control\" click.trigger=\"saveQuiz()\">Save</Button>\r\n                </div>\r\n               \r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li style=\"background-color:${quiz._id === filesModule.selectedQuiz._id ? 'cyan' : 'white'}\" repeat.for=\"quiz of filesModule.quizzesArray\" click.trigger=\"selectQuiz(quiz)\" class=\"list-group-item\">${quiz.name}<span click.delegate=\"removeQuiz(quiz)\" class=\"pull-right\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span></li>\r\n                </ul>\r\n                 \r\n            </div>\r\n     \r\n\t\t\t<div show.bind=\"filesModule.selectedQuiz._id\">\r\n\t\t\t\t<div style=\"margin-bottom: 20px;\">\r\n\t\t\t\t\t<button class=\"btn btn-primary\" click.trigger=\"toggleQuestions()\">Edit/New</button>\r\n\t\t\t\t\t<button show.bind=\"!showQuestions\" class=\"btn btn-primary\" click.trigger=\"saveQuestion()\">Save</button>\r\n\t\t\t\t\t<button show.bind=\"showQuestions\" class=\"btn btn-primary\" click.trigger=\"deleteQuestion()\">Delete</button>\r\n\t\t\t\t\t<div class=\"row float-right\" show.bind=\"showQuestions\">\r\n\t\t\t\t\t\t<button disable.bind=\"qustionIndex === 0\" class=\"btn btn-primary\" click.trigger=\"nextQuestion(-1)\">Previous</button>\r\n\t\t\t\t\t\t<button style=\"margin-left:10px;\" disable.bind=\"questionIndex === filesModule.questionArray.length - 1\" class=\"btn btn-primary\" click.trigger=\"nextQuestion(1)\">Next</button>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<editor  toolbar.bind=\"toolbar\" value.bind=\"filesModule.selectedQuestion.flash\" height=\"250\"></editor>\r\n\t\t\t\t\t<div style=\"margin-top:20px;\">\r\n\t\t\t\t\t\t<editor css=\"margin-top:20px;\" toolbar.bind=\"toolbar\" value.bind=\"filesModule.selectedQuestion.card\" height=\"250\"></editor>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t\t\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\t</div>\r\n</template>"; });
-define('text!editFile.html', ['module'], function(module) { module.exports = "<template>\r\n    <div show.bind=\"tool === 'filesDiv'\">\r\n\t\t<h1>Administration</h1>\r\n\t\t<div class=\"row\" style=\"margin-left:20px;\">\r\n\t\t\t<div class=\"col col-lg-3\">\r\n\t\t\t\t<h3>Files</h3>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<input type=\"text\" class=\"form-control\" value.bind=\"filesModule.selectedFile.name\" placeholder=\"Name\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<select value.bind=\"filesModule.selectedFile.type\" class=\"form-control\">\r\n\t\t\t\t\t\t<option value=\"QUIZ\">Quiz</option>\r\n\t\t\t\t\t\t<option value=\"KEY\">Quiz Key</option>\r\n\t\t\t\t\t\t<option value=\"IMAGE\">Image</option>\r\n\t\t\t\t\t\t<option value=\"NOTES\">PowerPoint</option>\r\n\t\t\t\t\t\t<option value=\"REVIEW\">Review</option>\r\n\t\t\t\t\t\t<option value=\"VIDEO\">Videos</option>\r\n\t\t\t\t\t</select>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-lg-12\">\r\n\t\t\t\t\t<label class=\"btn btn-primary\">\r\n\t\t\t\t\t\t\tBrowse for files&hellip; <input type=\"file\" style=\"display: none;\" change.delegate=\"changeFiles()\" files.bind=\"files\">\r\n\t\t\t\t\t</label>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<li show.bind=\"filesToUpload && filesToUpload[0]\" class=\"list-group-item\">${filesToUpload[0].name}<span click.delegate=\"removeFile(0)\" class=\"pull-right\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span></li>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<Button class=\"form-control\" click.trigger=\"save()\">Save</Button>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"col col-lg-9\">\r\n\t\t\t\t<div class=\"form-group col-lg-3\">\r\n\t\t\t\t\t<select value.bind=\"selectedType\" class=\"form-control\" change.trigger=\"filterList()\">\r\n\t\t\t\t\t\t<option value=\"\"></option>\t\t\t\t\t\r\n\t\t\t\t\t\t<option value=\"QUIZ\">Quiz</option>\r\n\t\t\t\t\t\t<option value=\"KEY\">Quiz Key</option>\r\n\t\t\t\t\t\t<option value=\"IMAGE\">Image</option>\r\n\t\t\t\t\t\t<option value=\"NOTES\">PowerPoint</option>\r\n\t\t\t\t\t\t<option value=\"REVIEW\">Review</option>\r\n\t\t\t\t\t\t<option value=\"VIDEO\">Videos</option>\r\n\t\t\t\t\t</select>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"row\"  style=\"margin-left:20px;\">\r\n\t\t\t\t\t<div class=\"col col-lg-6\">\r\n\t\t\t\t\t\t<li repeat.for=\"doc of filesModule.filteredList\" click.trigger=\"selectDoc(doc)\" class=\"list-group-item\">${doc.name}<span click.delegate=\"removeDocument(doc)\" class=\"pull-right\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span></li>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div show.bind=\"filesModule.selectedFile && filesModule.selectedFile.name && docSelected\" class=\"col col-lg-6\">\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<input class=\"form-control\" value.bind=\"filesModule.selectedFile.name\" />\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<select value.bind=\"filesModule.selectedFile.type\" class=\"form-control\">\r\n\t\t\t\t\t\t\t\t<option value =\"QUIZ\">Quiz</option>\r\n\t\t\t\t\t\t\t\t<option value=\"KEY\">Quiz Key</option>\r\n\t\t\t\t\t\t\t\t<option value=\"IMAGE\">Image</option>\r\n\t\t\t\t\t\t\t\t<option value=\"NOTES\">PowerPoint</option>\r\n\t\t\t\t\t\t\t\t<option value=\"REVIEW\">Review</option>\r\n\t\t\t\t\t\t\t\t<option value=\"VIDEO\">Videos</option>\r\n\t\t\t\t\t\t\t</select>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<a href=\"/uploads/${filesModule.selectedFile.type}/${filesModule.selectedFile.file.fileName}\" target=\"_blank\">${filesModule.selectedFile.file.fileName}</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"col-lg-12\">\r\n\t\t\t\t\t\t\t<label class=\"btn btn-primary\">\r\n\t\t\t\t\t\t\t\t\tBrowse for files&hellip; <input type=\"file\" style=\"display: none;\" change.delegate=\"changeFiles()\" files.bind=\"files\">\r\n\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<li show.bind=\"filesToUpload && filesToUpload[0]\" class=\"list-group-item\">${filesToUpload[0].name}<span click.delegate=\"removeFile(0)\" class=\"pull-right\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span></li>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<Button class=\"form-control\" click.trigger=\"save()\">Save</Button>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</template>"; });
+define('text!editFile.html', ['module'], function(module) { module.exports = "<template>\r\n    <div show.bind=\"tool === 'filesDiv'\">\r\n\t\t<h1>Administration</h1>\r\n\t\t<div class=\"row\" style=\"margin-left:20px;\">\r\n\t\t\t<div class=\"col col-lg-3\">\r\n\t\t\t\t<h3>Files</h3>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<input type=\"text\" class=\"form-control\" value.bind=\"filesModule.selectedFile.name\" placeholder=\"Name\" />\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<select value.bind=\"filesModule.selectedFile.type\" class=\"form-control\">\r\n\t\t\t\t\t\t<option value=\"QUIZ\">Quiz</option>\r\n\t\t\t\t\t\t<option value=\"KEY\">Quiz Key</option>\r\n\t\t\t\t\t\t<option value=\"IMAGE\">Image</option>\r\n\t\t\t\t\t\t<option value=\"NOTES\">PowerPoint</option>\r\n\t\t\t\t\t\t<option value=\"REVIEW\">Review</option>\r\n\t\t\t\t\t\t<option value=\"VIDEO\">Videos</option>\r\n\t\t\t\t\t</select>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"col-lg-12\">\r\n\t\t\t\t\t<label class=\"btn btn-primary\">\r\n\t\t\t\t\t\t\tBrowse for files&hellip; <input type=\"file\" style=\"display: none;\" change.delegate=\"changeFiles()\" files.bind=\"files\">\r\n\t\t\t\t\t</label>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<li show.bind=\"filesToUpload && filesToUpload[0]\" class=\"list-group-item\">${filesToUpload[0].name}<span click.delegate=\"removeFile(0)\" class=\"pull-right\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span></li>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t<Button class=\"form-control\" click.trigger=\"save()\">Save</Button>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"col col-lg-9\">\r\n\t\t\t\t<div class=\"form-group col-lg-3\">\r\n\t\t\t\t\t<select value.bind=\"selectedType\" class=\"form-control\" change.trigger=\"filterList()\">\r\n\t\t\t\t\t\t<option value=\"\"></option>\t\t\t\t\t\r\n\t\t\t\t\t\t<option value=\"QUIZ\">Quiz</option>\r\n\t\t\t\t\t\t<option value=\"KEY\">Quiz Key</option>\r\n\t\t\t\t\t\t<option value=\"IMAGE\">Image</option>\r\n\t\t\t\t\t\t<option value=\"NOTES\">PowerPoint</option>\r\n\t\t\t\t\t\t<option value=\"REVIEW\">Review</option>\r\n\t\t\t\t\t\t<option value=\"VIDEO\">Videos</option>\r\n\t\t\t\t\t</select>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"row\"  style=\"margin-left:20px;\">\r\n\t\t\t\t\t<div class=\"col col-lg-6\">\r\n\t\t\t\t\t\t<li repeat.for=\"doc of filesModule.filteredList\" click.trigger=\"selectDoc(doc)\" class=\"list-group-item\">${doc.name}</li>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div show.bind=\"filesModule.selectedFile && filesModule.selectedFile.name && docSelected\" class=\"col col-lg-6\">\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<input class=\"form-control\" value.bind=\"filesModule.selectedFile.name\" />\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<select value.bind=\"filesModule.selectedFile.type\" class=\"form-control\">\r\n\t\t\t\t\t\t\t\t<option value =\"QUIZ\">Quiz</option>\r\n\t\t\t\t\t\t\t\t<option value=\"KEY\">Quiz Key</option>\r\n\t\t\t\t\t\t\t\t<option value=\"IMAGE\">Image</option>\r\n\t\t\t\t\t\t\t\t<option value=\"NOTES\">PowerPoint</option>\r\n\t\t\t\t\t\t\t\t<option value=\"REVIEW\">Review</option>\r\n\t\t\t\t\t\t\t\t<option value=\"VIDEO\">Videos</option>\r\n\t\t\t\t\t\t\t</select>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<a href=\"/uploads/${filesModule.selectedFile.type}/${filesModule.selectedFile.file.fileName}\" target=\"_blank\">${filesModule.selectedFile.file.fileName}</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"col-lg-12\">\r\n\t\t\t\t\t\t\t<label class=\"btn btn-primary\">\r\n\t\t\t\t\t\t\t\t\tBrowse for files&hellip; <input type=\"file\" style=\"display: none;\" change.delegate=\"changeFiles()\" files.bind=\"files\">\r\n\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<li show.bind=\"filesToUpload && filesToUpload[0]\" class=\"list-group-item\">${filesToUpload[0].name}<span click.delegate=\"removeFile(0)\" class=\"pull-right\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span></li>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<Button class=\"form-control\" click.trigger=\"save()\">Save</Button>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<div class=\"form-group\">\r\n\t\t\t\t\t\t\t<Button class=\"form-control\" click.trigger=\"removeDocument()\">Delete</Button>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</template>"; });
 define('app',['exports', 'aurelia-framework', 'aurelia-router'], function (exports, _aureliaFramework, _aureliaRouter) {
     'use strict';
 
@@ -2322,7 +2318,7 @@ define('admin',['exports', 'aurelia-framework', './resources/data/files'], funct
 						switch (_context2.prev = _context2.next) {
 							case 0:
 								if (!this.filesModule.selectedFile.name) {
-									_context2.next = 5;
+									_context2.next = 9;
 									break;
 								}
 
@@ -2331,9 +2327,20 @@ define('admin',['exports', 'aurelia-framework', './resources/data/files'], funct
 
 							case 3:
 								this.docSelected = false;
-								if (this.filesToUpload && this.filesToUpload.length) this.filesModule.uploadFile(this.filesToUpload);
+								this.filesModule.selectFile();
 
-							case 5:
+								if (!(this.filesToUpload && this.filesToUpload.length)) {
+									_context2.next = 8;
+									break;
+								}
+
+								_context2.next = 8;
+								return this.filesModule.uploadFile(this.filesToUpload);
+
+							case 8:
+								this.filesToUpload = [];
+
+							case 9:
 							case 'end':
 								return _context2.stop();
 						}
@@ -2359,7 +2366,8 @@ define('admin',['exports', 'aurelia-framework', './resources/data/files'], funct
 		};
 
 		Admin.prototype.removeDocument = function removeDocument(doc) {
-			this.filesModule.deleteDoc(doc._id);
+			this.filesModule.deleteDoc(this.filesModule.selectedFile._id);
+			this.filterList();
 		};
 
 		Admin.prototype.saveQuiz = function () {

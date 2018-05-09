@@ -39,7 +39,7 @@ export class Files {
 	}
 
 	selectFile(index){
-		if(!index){
+		if(index === undefined){
 			this.selectedFile = this.emptyFile();
 		}
 	}
@@ -89,7 +89,7 @@ export class Files {
 	async deleteDoc(id){
 		if(id){
 			await this.data.deleteObject("docs/" + id);
-			await this.getDocumentsArray();
+			// await this.getDocumentsArray();
 		}
 	}
 

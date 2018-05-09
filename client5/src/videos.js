@@ -16,19 +16,8 @@ export class Resources {
         await this.filesModule.getDocsByType('VIDEO');
         this.filesModule.filteredList.forEach(item => {
             let parts = item.name.split(":");
-            item.name = parts[0];
-            this.units[parseInt(parts[1]) - 1].push(item);
-            // switch (parts[]) {
-            //     case 'IMAGE':
-            //         this.imageArray.push(item);
-            //         break;
-            //     case 'NOTES':
-            //         this.notesArray.push(item);
-            //         break;
-            //     case 'REVIEW':
-            //         this.reviewsArray.push(item);
-            //         break;
-            // }
+            item.name = parts[1];
+            this.units[parseInt(parts[0]) - 1].push(item); 
         });
 	}
 }

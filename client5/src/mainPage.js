@@ -10,8 +10,6 @@ export class MainPage{
         this.router = router;
         this.user = JSON.parse(sessionStorage.getItem('user'));
     }
-
-
     
     configureRouter(config, router) {
         config.map([

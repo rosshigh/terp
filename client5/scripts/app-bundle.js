@@ -69,7 +69,7 @@ define('videos',['exports', 'aurelia-framework', './resources/data/files'], func
               case 4:
                 this.filesModule.filteredList.forEach(function (item) {
                   var parts = item.name.split(":");
-                  item.name = parts[1];
+                  item.name = item.file.fileName.split('.')[0];
                   _this.units[parseInt(parts[0]) - 1].push(item);
                 });
 

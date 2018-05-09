@@ -16,7 +16,7 @@ export class Resources {
         await this.filesModule.getDocsByType('VIDEO');
         this.filesModule.filteredList.forEach(item => {
             let parts = item.name.split(":");
-            item.name = parts[1];
+            item.name = item.file.fileName.split('.')[0];
             this.units[parseInt(parts[0]) - 1].push(item); 
         });
 	}

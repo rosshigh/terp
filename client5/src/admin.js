@@ -45,9 +45,9 @@ export class Admin {
 		if(this.filesModule.selectedFile.name){
 			await this.filesModule.saveFile();
 			this.docSelected = false;
-			this.filesModule.selectFile();
 			if(this.filesToUpload && this.filesToUpload.length) await this.filesModule.uploadFile(this.filesToUpload);
 			this.filesToUpload = [];
+			this.filesModule.selectFile();
 		}
 	}
 

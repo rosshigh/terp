@@ -27,13 +27,14 @@
 						<button style="margin-left:10px;" disable.bind="questionIndex === filesModule.questionArray.length - 1" class="btn btn-primary" click.trigger="nextQuestion(1)">Next</button>
 					</div>
 				</div>
-				
-				<div>
+			
+				<div if.bind="filesModule.selectedQuiz._id">
 					<editor  toolbar.bind="toolbar" value.bind="filesModule.selectedQuestion.flash" height="250"></editor>
 					<div style="margin-top:20px;">
 						<editor css="margin-top:20px;" toolbar.bind="toolbar" value.bind="filesModule.selectedQuestion.card" height="250"></editor>
 					</div>
 				</div>
+		
 					
 			</div>
 		</div>

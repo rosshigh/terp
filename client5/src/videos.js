@@ -10,7 +10,7 @@ export class Resources {
 
 	async activate(){
         this.units = [];
-        for(let i = 0; i < 9; i++){
+        for(let i = 0; i < 10; i++){
             this.units.push([]);
         }
         await this.filesModule.getDocsByType('VIDEO');

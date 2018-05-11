@@ -17,6 +17,7 @@ module.exports = Mongoose.model('Document', DocSchema);
 var EventSchema = new Schema({
 	title: { type: String },
 	start: { type: String },
+	allDay: { type: Boolean, default: false },
 	sortOrder: { type: Number }
 });
 

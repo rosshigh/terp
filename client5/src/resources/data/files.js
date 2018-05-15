@@ -155,6 +155,18 @@ export class Files {
 			let serverResponse = await this.data.get("questions/quiz/" + id);
 			if (!serverResponse.status) {
 				this.questionArray = serverResponse;
+				this.questionArray.forEach(item => {
+					item.sortOrder = Math.random();
+				});
+				for(let i = 0; i < this.questionArray.length; i++){
+					for(let j = 0; j < this.questionArray.length - 1; j++){
+						if(this.questionArray[j].sortOrder < this.questionArray[j + 1].sortOrder){
+							let temp = this.questionArray[j];
+							this.questionArray[j] = this.questionArray[j + 1];
+							this.questionArray[j + 1] = temp;
+						}
+					}
+				}
 			} else {
 				return undefined;
 			}

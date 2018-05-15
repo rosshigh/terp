@@ -1005,7 +1005,7 @@ define('resources/data/files',['exports', 'aurelia-framework', './data-services'
 
 		Files.prototype.getQuestionArray = function () {
 			var _ref8 = _asyncToGenerator(regeneratorRuntime.mark(function _callee8(id) {
-				var serverResponse;
+				var serverResponse, i, j, temp;
 				return regeneratorRuntime.wrap(function _callee8$(_context8) {
 					while (1) {
 						switch (_context8.prev = _context8.next) {
@@ -1019,34 +1019,47 @@ define('resources/data/files',['exports', 'aurelia-framework', './data-services'
 								serverResponse = _context8.sent;
 
 								if (serverResponse.status) {
-									_context8.next = 9;
+									_context8.next = 11;
 									break;
 								}
 
 								this.questionArray = serverResponse;
-								_context8.next = 10;
+								this.questionArray.forEach(function (item) {
+									item.sortOrder = Math.random();
+								});
+								for (i = 0; i < this.questionArray.length; i++) {
+									for (j = 0; j < this.questionArray.length - 1; j++) {
+										if (this.questionArray[j].sortOrder < this.questionArray[j + 1].sortOrder) {
+											temp = this.questionArray[j];
+
+											this.questionArray[j] = this.questionArray[j + 1];
+											this.questionArray[j + 1] = temp;
+										}
+									}
+								}
+								_context8.next = 12;
 								break;
 
-							case 9:
+							case 11:
 								return _context8.abrupt('return', undefined);
 
-							case 10:
-								_context8.next = 16;
+							case 12:
+								_context8.next = 18;
 								break;
 
-							case 12:
-								_context8.prev = 12;
+							case 14:
+								_context8.prev = 14;
 								_context8.t0 = _context8['catch'](1);
 
 								console.log(_context8.t0);
 								return _context8.abrupt('return', undefined);
 
-							case 16:
+							case 18:
 							case 'end':
 								return _context8.stop();
 						}
 					}
-				}, _callee8, this, [[1, 12]]);
+				}, _callee8, this, [[1, 14]]);
 			}));
 
 			function getQuestionArray(_x4) {
@@ -1950,7 +1963,7 @@ define('mainPage',["exports", "aurelia-framework", "aurelia-router"], function (
         return MainPage;
     }()) || _class);
 });
-define('text!mainPage.html', ['module'], function(module) { module.exports = "<template>\r\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\r\n        <a class=\"navbar-brand\" href=\"home#/mainPage\">TERP10</a>\r\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\r\n            <ul class=\"navbar-nav\" repeat.for=\"nav of router.navigation\">\r\n                <li if.bind=\"nav.settings.roles === user.role || user.role === 'admin'\" class=\"nav-item ${nav.isActive ? 'active' : ''}\">\r\n                <a class=\"nav-link\" href.bind=\"nav.href\">${nav.title}</a></li>\r\n            </ul>\r\n            <form class=\"form-inline my-2 my-lg-0 ml-auto\">\r\n                <a click.trigger=\"logout()\" class=\"nav-link\" href=\"#\">Logout</a></li>\r\n            </form>\r\n        </div>\r\n    </nav>\r\n    <div class=\"col-lg-12\">\r\n        <router-view></router-view>\r\n    </div>\r\n</template>"; });
+define('text!mainPage.html', ['module'], function(module) { module.exports = "<template>\r\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\r\n        <a class=\"navbar-brand\" href=\"#/mainPage\">TERP10</a>\r\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\r\n            <ul class=\"navbar-nav\" repeat.for=\"nav of router.navigation\">\r\n                <li if.bind=\"nav.settings.roles === user.role || user.role === 'admin'\" class=\"nav-item ${nav.isActive ? 'active' : ''}\">\r\n                <a class=\"nav-link\" href.bind=\"nav.href\">${nav.title}</a></li>\r\n            </ul>\r\n            <form class=\"form-inline my-2 my-lg-0 ml-auto\">\r\n                <a click.trigger=\"logout()\" class=\"nav-link\" href=\"#\">Logout</a></li>\r\n            </form>\r\n        </div>\r\n    </nav>\r\n    <div class=\"col-lg-12\">\r\n        <router-view></router-view>\r\n    </div>\r\n</template>"; });
 define('main',['exports', './environment', 'regenerator-runtime'], function (exports, _environment, _regeneratorRuntime) {
   'use strict';
 

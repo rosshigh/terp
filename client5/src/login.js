@@ -41,7 +41,7 @@ export class Login {
         if (this.userObj) {
             if (!this.userObj.userRole)  this.logout();
             sessionStorage.setItem('role',this.userObj.userRole)
-            this.router.navigate("home");
+            this.router.navigate("mainPage");
         } else {
             this.utils.showNotification("There was a problem validating your account")
             this.router.navigate("login");

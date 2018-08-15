@@ -1517,10 +1517,12 @@ define('resources/data/auth',['exports', 'aurelia-framework', 'aurelia-event-agg
 									'username': username,
 									'password': password
 								};
-								_context.next = 3;
+
+								console.log(content);
+								_context.next = 4;
 								return this.data.login(content, this.loginUrl);
 
-							case 3:
+							case 4:
 								response = _context.sent;
 
 								if (!response.error) {
@@ -1532,7 +1534,7 @@ define('resources/data/auth',['exports', 'aurelia-framework', 'aurelia-event-agg
 								this.eventAggregator.publish('auth:login', response);
 								return _context.abrupt('return', response);
 
-							case 7:
+							case 8:
 							case 'end':
 								return _context.stop();
 						}
@@ -2063,10 +2065,12 @@ define('login',["exports", "aurelia-framework", "aurelia-router", "./resources/d
                     while (1) {
                         switch (_context.prev = _context.next) {
                             case 0:
-                                _context.next = 2;
+                                console.log(this.username);
+                                console.log(this.password);
+                                _context.next = 4;
                                 return this.auth.login(this.username, this.password);
 
-                            case 2:
+                            case 4:
                                 response = _context.sent;
 
                                 if (!response.error) {
@@ -2077,7 +2081,7 @@ define('login',["exports", "aurelia-framework", "aurelia-router", "./resources/d
                                     this.loginError = "Invalid credentials.";
                                 }
 
-                            case 4:
+                            case 6:
                             case "end":
                                 return _context.stop();
                         }

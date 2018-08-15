@@ -19,6 +19,8 @@ export class Login {
     // }
 
     async login(){
+        console.log(this.username)
+        console.log(this.password)
         let response = await this.auth.login(this.username, this.password)
         if(!response.error){
             this.loginError = "";

@@ -18,7 +18,7 @@ export class Auth {
 			'username': username,
 			'password': password
 		};
-
+console.log(content)
 		let response = await this.data.login(content, this.loginUrl);
 		if(!response.error){
 			response.user.userRole = response.user.role;

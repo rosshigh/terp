@@ -2189,6 +2189,7 @@ define('app',['exports', 'aurelia-framework', 'aurelia-router'], function (expor
         }
 
         App.prototype.configureRouter = function configureRouter(config, router) {
+            config.addPipelineStep('authorize', AuthorizeStep);
             config.addAuthorizeStep(AuthorizeStep);
             config.map([{ route: ['login', ''], name: 'login', moduleId: './login' }, { route: 'mainPage', name: 'mainPage', moduleId: './mainPage', settings: { auth: true, roles: 'user' } }]);
 
@@ -2209,7 +2210,9 @@ define('app',['exports', 'aurelia-framework', 'aurelia-router'], function (expor
             })) {
                 var role = sessionStorage.getItem('role');
                 var requiredRoles = navigationInstruction.getAllInstructions()[0].config.settings.roles;
-
+                navigationInstruction.getAllInstructions().map(function (i) {
+                    return i.config.settings.roles;
+                })[1];
                 if (!role) {
                     return next.cancel(new _aureliaRouter.Redirect('login'));
                 } else if (requiredRoles !== role && role !== 'admin') {

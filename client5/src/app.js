@@ -9,7 +9,7 @@ export class App{
     }
     
     configureRouter(config, router) {
-        // config.addPipelineStep('authorize', AuthorizeStep);
+        config.addPipelineStep('authorize', AuthorizeStep);
         config.addAuthorizeStep(AuthorizeStep);
         config.map([
             { route: ['login',''],     name: 'login',       moduleId: './login' },
@@ -26,7 +26,7 @@ class AuthorizeStep {
       if (navigationInstruction.getAllInstructions().some(i => i.config.settings.auth)) {
         let role = sessionStorage.getItem('role');
         let requiredRoles = navigationInstruction.getAllInstructions()[0].config.settings.roles;
-        // navigationInstruction.getAllInstructions().map(i => i.config.settings.roles)[1];
+        navigationInstruction.getAllInstructions().map(i => i.config.settings.roles)[1];
         if (!role) {
           return next.cancel(new Redirect('login'));
         } else if (requiredRoles !== role && role !== 'admin') {

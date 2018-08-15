@@ -19,8 +19,6 @@ export class Login {
     // }
 
     async login(){
-        console.log(this.username)
-        console.log(this.password)
         let response = await this.auth.login(this.username, this.password)
         if(!response.error){
             this.loginError = "";
@@ -43,7 +41,7 @@ export class Login {
         if (this.userObj) {
             if (!this.userObj.userRole)  this.logout();
             sessionStorage.setItem('role',this.userObj.userRole)
-            this.router.navigate("mainPage");
+            this.router.navigate("home");
         } else {
             this.utils.showNotification("There was a problem validating your account")
             this.router.navigate("login");

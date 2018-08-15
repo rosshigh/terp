@@ -1517,12 +1517,10 @@ define('resources/data/auth',['exports', 'aurelia-framework', 'aurelia-event-agg
 									'username': username,
 									'password': password
 								};
-
-								console.log(content);
-								_context.next = 4;
+								_context.next = 3;
 								return this.data.login(content, this.loginUrl);
 
-							case 4:
+							case 3:
 								response = _context.sent;
 
 								if (!response.error) {
@@ -1534,7 +1532,7 @@ define('resources/data/auth',['exports', 'aurelia-framework', 'aurelia-event-agg
 								this.eventAggregator.publish('auth:login', response);
 								return _context.abrupt('return', response);
 
-							case 8:
+							case 7:
 							case 'end':
 								return _context.stop();
 						}
@@ -2065,12 +2063,10 @@ define('login',["exports", "aurelia-framework", "aurelia-router", "./resources/d
                     while (1) {
                         switch (_context.prev = _context.next) {
                             case 0:
-                                console.log(this.username);
-                                console.log(this.password);
-                                _context.next = 4;
+                                _context.next = 2;
                                 return this.auth.login(this.username, this.password);
 
-                            case 4:
+                            case 2:
                                 response = _context.sent;
 
                                 if (!response.error) {
@@ -2081,7 +2077,7 @@ define('login',["exports", "aurelia-framework", "aurelia-router", "./resources/d
                                     this.loginError = "Invalid credentials.";
                                 }
 
-                            case 6:
+                            case 4:
                             case "end":
                                 return _context.stop();
                         }
@@ -2113,7 +2109,7 @@ define('login',["exports", "aurelia-framework", "aurelia-router", "./resources/d
                                 if (this.userObj) {
                                     if (!this.userObj.userRole) this.logout();
                                     sessionStorage.setItem('role', this.userObj.userRole);
-                                    this.router.navigate("mainPage");
+                                    this.router.navigate("home");
                                 } else {
                                     this.utils.showNotification("There was a problem validating your account");
                                     this.router.navigate("login");
@@ -2195,7 +2191,7 @@ define('app',['exports', 'aurelia-framework', 'aurelia-router'], function (expor
         App.prototype.configureRouter = function configureRouter(config, router) {
             config.addPipelineStep('authorize', AuthorizeStep);
             config.addAuthorizeStep(AuthorizeStep);
-            config.map([{ route: ['login', ''], name: 'login', moduleId: './login' }, { route: 'mainPage', name: 'mainPage', moduleId: './mainPage', settings: { auth: true, roles: 'user' } }]);
+            config.map([{ route: ['login', ''], name: 'login', moduleId: './login' }, { route: 'mainPage', name: 'mainPage', moduleId: './mainPage', settings: { auth: true, roles: 'user' } }, { route: 'home', name: 'home', moduleId: './home', settings: { auth: true, roles: 'user' } }]);
 
             this.router = router;
         };

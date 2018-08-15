@@ -13,7 +13,8 @@ export class App{
         config.addAuthorizeStep(AuthorizeStep);
         config.map([
             { route: ['login',''],     name: 'login',       moduleId: './login' },
-            { route: 'mainPage',        name: 'mainPage',    moduleId: './mainPage', settings: { auth: true, roles: 'user' } }
+            { route: 'mainPage',        name: 'mainPage',    moduleId: './mainPage', settings: { auth: true, roles: 'user' } },
+            { route: 'home',        name: 'home',    moduleId: './home', settings: { auth: true, roles: 'user' } }
         ]);
 
         this.router = router;

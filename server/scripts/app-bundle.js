@@ -1125,8 +1125,7 @@ define('resources/data/data-services',["exports", "aurelia-framework", "aurelia-
       this.isRequesting = false;
       this.http = http;
       this.http.configure(function (x) {
-        // x.withBaseUrl('http://git.ucc.uwm.edu');
-        x.withBaseUrl('http://localhost');
+        x.withBaseUrl('http://git.ucc.uwm.edu'); // x.withBaseUrl('http://localhost');
       });
     }
 

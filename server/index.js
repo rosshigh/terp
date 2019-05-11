@@ -7,7 +7,7 @@ var app = express();
 
 app.use(express.static('./public'));
 // app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
-app.use(cors({origin: "http://localhost:9000"}));
+app.use(cors({origin: "*"}));
 
 console.log("Loading Mongoose functionality");
 mongoose.Promise = require('bluebird');

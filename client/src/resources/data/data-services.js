@@ -11,7 +11,7 @@ export class DataServices {
 		this.http.configure(x => {
             // x.withBaseUrl('http://git.ucc.uwm.edu');
             x.withBaseUrl('http://localhost');
-		}); 
+		});
     }
 
 	activate(){

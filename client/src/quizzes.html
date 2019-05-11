@@ -1,0 +1,16 @@
+<template>
+    <div class="container">
+        <h2 style="margin-top:40px;">Quizzes</h2>
+            <ul class="list-group">
+                <li repeat.for="file of quizArray" class="list-group-item">
+                    <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                </li>
+            </ul>
+        <h2 style="margin-top:40px;">Quiz Keys</h2>
+        <ul class="list-group">
+            <li repeat.for="file of keyArray" class="list-group-item">
+                <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+            </li>
+        </ul>
+    </div>
+</template>

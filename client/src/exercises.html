@@ -1,0 +1,20 @@
+<template>
+    <style>
+        ul li{ /* second well;*/
+            list-style-type:none;
+        }
+    </style>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 show.bind="exercisesArray.length" style="margin-top:40px;">Exercises</h2>
+                    <ul show.bind="exercisesArray.length"  class="list-group">
+                        <li repeat.for="file of exercisesArray" >
+                            <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</template>

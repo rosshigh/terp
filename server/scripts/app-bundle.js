@@ -438,7 +438,7 @@ define('exercises',["exports", "aurelia-framework", "./resources/data/files"], f
               case 0:
                 this.exercisesArray = [];
                 _context.next = 3;
-                return this.filesModule.getDocumentsArray();
+                return this.filesModule.getDocumentsArray('?order=sortOrder');
 
               case 3:
                 this.filesModule.documentsArray.forEach(function (item) {

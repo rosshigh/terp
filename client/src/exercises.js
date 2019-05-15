@@ -10,7 +10,7 @@ export class Exercises {
 
 	async activate(){
         this.exercisesArray = [];
-        await this.filesModule.getDocumentsArray();
+        await this.filesModule.getDocumentsArray('?order=sortOrder');
         this.filesModule.documentsArray.forEach(item => {
             switch (item.type) {
                 case 'EXER':

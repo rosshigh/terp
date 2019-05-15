@@ -8,10 +8,11 @@ export class Files {
 		this.data = data;  
 	}
 
-	async getDocumentsArray() {
+	async getDocumentsArray(filter) {
 		this.documentsArray = new Array(); 
+		let url = filter ? "docs" + filter : "docs";
 		try {
-			let serverResponse = await this.data.get("docs");
+			let serverResponse = await this.data.get(url);
 			if (!serverResponse.status) {
 				this.documentsArray = serverResponse;
 			} else {

@@ -1410,51 +1410,52 @@ define('resources/data/files',["exports", "aurelia-framework", "./data-services"
     function () {
       var _getDocumentsArray = _asyncToGenerator(
       /*#__PURE__*/
-      regeneratorRuntime.mark(function _callee() {
-        var serverResponse;
+      regeneratorRuntime.mark(function _callee(filter) {
+        var url, serverResponse;
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 this.documentsArray = new Array();
-                _context.prev = 1;
-                _context.next = 4;
-                return this.data.get("docs");
+                url = filter ? "docs" + filter : "docs";
+                _context.prev = 2;
+                _context.next = 5;
+                return this.data.get(url);
 
-              case 4:
+              case 5:
                 serverResponse = _context.sent;
 
                 if (serverResponse.status) {
-                  _context.next = 9;
+                  _context.next = 10;
                   break;
                 }
 
                 this.documentsArray = serverResponse;
-                _context.next = 10;
+                _context.next = 11;
                 break;
-
-              case 9:
-                return _context.abrupt("return", undefined);
 
               case 10:
-                _context.next = 16;
+                return _context.abrupt("return", undefined);
+
+              case 11:
+                _context.next = 17;
                 break;
 
-              case 12:
-                _context.prev = 12;
-                _context.t0 = _context["catch"](1);
+              case 13:
+                _context.prev = 13;
+                _context.t0 = _context["catch"](2);
                 console.log(_context.t0);
                 return _context.abrupt("return", undefined);
 
-              case 16:
+              case 17:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[1, 12]]);
+        }, _callee, this, [[2, 13]]);
       }));
 
-      function getDocumentsArray() {
+      function getDocumentsArray(_x) {
         return _getDocumentsArray.apply(this, arguments);
       }
 
@@ -1510,7 +1511,7 @@ define('resources/data/files',["exports", "aurelia-framework", "./data-services"
         }, _callee2, this, [[1, 12]]);
       }));
 
-      function getDocsByType(_x) {
+      function getDocsByType(_x2) {
         return _getDocsByType.apply(this, arguments);
       }
 
@@ -1629,7 +1630,7 @@ define('resources/data/files',["exports", "aurelia-framework", "./data-services"
         }, _callee4, this);
       }));
 
-      function deleteDoc(_x2) {
+      function deleteDoc(_x3) {
         return _deleteDoc.apply(this, arguments);
       }
 
@@ -1799,7 +1800,7 @@ define('resources/data/files',["exports", "aurelia-framework", "./data-services"
         }, _callee7, this);
       }));
 
-      function deleteQuiz(_x3) {
+      function deleteQuiz(_x4) {
         return _deleteQuiz.apply(this, arguments);
       }
 
@@ -1870,7 +1871,7 @@ define('resources/data/files',["exports", "aurelia-framework", "./data-services"
         }, _callee8, this, [[1, 14]]);
       }));
 
-      function getQuestionArray(_x4) {
+      function getQuestionArray(_x5) {
         return _getQuestionArray.apply(this, arguments);
       }
 
@@ -1984,7 +1985,7 @@ define('resources/data/files',["exports", "aurelia-framework", "./data-services"
         }, _callee10, this);
       }));
 
-      function deleteQuestion(_x5) {
+      function deleteQuestion(_x6) {
         return _deleteQuestion.apply(this, arguments);
       }
 

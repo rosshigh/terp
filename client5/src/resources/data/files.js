@@ -94,10 +94,10 @@ export class Files {
 	}
 
 	//Quizzes
-	async getQuizArray() {
+	async getQuizArray(filter) {
 		this.quizzesArray = new Array(); 
 		try {
-			let serverResponse = await this.data.get("quizzes");
+			let serverResponse = await this.data.get("quizzes" + filter);
 			if (!serverResponse.status) {
 				this.quizzesArray = serverResponse;
 			} else {

@@ -1,0 +1,46 @@
+<template>
+    <style>
+        ul li{ /* second well;*/
+            list-style-type:none;
+        }
+    </style>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 show.bind="reviewsArray.length" style="margin-top:40px;">Review</h2>
+                    <ul show.bind="reviewsArray.length"  class="list-group">
+                        <li repeat.for="file of reviewsArray" >
+                            <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                        </li>
+                    </ul>
+                <h2 show.bind="imageArray.length" style="margin-top:40px;">Images</h2>
+                    <ul show.bind="imageArray.length" class="list-group">
+                        <li repeat.for="file of imageArray" >
+                            <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                        </li>
+                    </ul>
+                <h2 show.bind="notesArray.length" style="margin-top:40px;">Notes</h2>
+                    <ul show.bind="notesArray.length" class="list-group">
+                        <li repeat.for="file of notesArray" >
+                            <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="col">
+                <h2 show.bind="quizArray.length" style="margin-top:40px;">Quizzes</h2>
+                    <ul show.bind="quizArray.length" class="list-group">
+                        <li repeat.for="file of quizArray" >
+                            <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                        </li>
+                    </ul>
+                <h2 show.bind="keyArray.length" style="margin-top:40px;">Quizz Keys</h2>
+                    <ul show.bind="keyArray.length" class="list-group">
+                        <li repeat.for="file of keyArray" >
+                            <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</template>

@@ -1,0 +1,7 @@
+<template>
+	<div class="container">
+		<h1>Schedule</h1>
+		<calendar events.bind="events.eventsArray" view="month" weekends.bind="true" day-click.bind="dayClicked" 
+		eoptions.bind="{ eventLimit: true, header: {left: 'My title', right:  'today month,agendaWeek,agendaDay,list prev,next'} }" ></calendar>
+	</div>
+</template>

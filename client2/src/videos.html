@@ -1,80 +1,81 @@
 <template>
-        <style>
-            ul li{ /* second well;*/
-                list-style-type:none;
-            }
-        </style>
-        
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 show.bind="units[0].length" style="margin-top:40px;">Unit 1</h2>
-                        <ul show.bind="units[0].length"  class="list-group">
-                            <li repeat.for="file of units[0]" >
-                                <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                            </li>
-                        </ul>
-                    <h2 show.bind="units[1].length" style="margin-top:40px;">Unit 2</h2>
-                        <ul show.bind="units[1].length" class="list-group">
-                            <li repeat.for="file of units[1]" >
-                                <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                            </li>
-                        </ul>
-                    <h2 show.bind="units[2].length" style="margin-top:40px;">Unit 3</h2>
-                        <ul show.bind="units[2].length" class="list-group">
-                            <li repeat.for="file of units[2]" >
-                                <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                            </li>
-                        </ul>
-                 
-                    <h2 show.bind="units[3].length" style="margin-top:40px;">Unit 4</h2>
-                        <ul show.bind="units[3].length" class="list-group">
-                            <li repeat.for="file of units[3]" >
-                                <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                            </li>
-                        </ul>
-                
-                    <h2 show.bind="units[4].length" style="margin-top:40px;">Unit 5</h2>
-                        <ul show.bind="units[4].length" class="list-group">
-                            <li repeat.for="file of units[4]" >
-                                <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                            <h2 show.bind="units[5].length" style="margin-top:40px;">Unit 6</h2>
-                            <ul show.bind="units[5].length"  class="list-group">
-                                <li repeat.for="file of units[5]" >
-                                    <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                                </li>
-                            </ul>
-                        <h2 show.bind="units[6].length" style="margin-top:40px;">Unit 7</h2>
-                            <ul show.bind="units[6].length" class="list-group">
-                                <li repeat.for="file of units[6]" >
-                                    <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                                </li>
-                            </ul>
-                        <h2 show.bind="units[7].length" style="margin-top:40px;">Unit 8</h2>
-                            <ul show.bind="units[7].length" class="list-group">
-                                <li repeat.for="file of units[7]" >
-                                    <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                                </li>
-                            </ul>
-                     
-                        <h2 show.bind="units[8].length" style="margin-top:40px;">Unit 9</h2>
-                            <ul show.bind="units[8].length" class="list-group">
-                                <li repeat.for="file of units[8]" >
-                                    <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                                </li>
-                            </ul>
-                    
-                        <h2 show.bind="units[9].length" style="margin-top:40px;">Unit 10</h2>
-                            <ul show.bind="units[9].length" class="list-group">
-                                <li repeat.for="file of units[9]" >
-                                    <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
-                                </li>
-                            </ul>
-                    </div>
-                </div>
+    <style>
+        ul li {
+            /* second well;*/
+            list-style-type: none;
+        }
+    </style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 show.bind="units[0].length" style="margin-top:40px;">Unit 1</h2>
+                <ul show.bind="units[0].length" class="list-group">
+                    <li repeat.for="file of units[0]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+                <h2 show.bind="units[1].length" style="margin-top:40px;">Unit 2</h2>
+                <ul show.bind="units[1].length" class="list-group">
+                    <li repeat.for="file of units[1]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+                <h2 show.bind="units[2].length" style="margin-top:40px;">Unit 3</h2>
+                <ul show.bind="units[2].length" class="list-group">
+                    <li repeat.for="file of units[2]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+
+                <h2 show.bind="units[3].length" style="margin-top:40px;">Unit 4</h2>
+                <ul show.bind="units[3].length" class="list-group">
+                    <li repeat.for="file of units[3]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+
+                <h2 show.bind="units[4].length" style="margin-top:40px;">Unit 5</h2>
+                <ul show.bind="units[4].length" class="list-group">
+                    <li repeat.for="file of units[4]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+                <h2 show.bind="units[5].length" style="margin-top:40px;">Unit 6</h2>
+                <ul show.bind="units[5].length" class="list-group">
+                    <li repeat.for="file of units[5]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2 show.bind="units[6].length" style="margin-top:40px;">Unit 7</h2>
+                <ul show.bind="units[6].length" class="list-group">
+                    <li repeat.for="file of units[6]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+                <h2 show.bind="units[7].length" style="margin-top:40px;">Unit 8</h2>
+                <ul show.bind="units[7].length" class="list-group">
+                    <li repeat.for="file of units[7]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+
+                <h2 show.bind="units[8].length" style="margin-top:40px;">Unit 9</h2>
+                <ul show.bind="units[8].length" class="list-group">
+                    <li repeat.for="file of units[8]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+
+                <h2 show.bind="units[9].length" style="margin-top:40px;">Unit 10</h2>
+                <ul show.bind="units[9].length" class="list-group">
+                    <li repeat.for="file of units[9]">
+                        <a href="/uploads/${file.type}/${file.file.fileName}" target="_blank">${file.name}</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </template>
+    </div>
+</template>

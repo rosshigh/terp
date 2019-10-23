@@ -5,21 +5,22 @@ var express = require('express'),
 	Quiz = mongoose.model('Quiz'),
 	Question = mongoose.model('Question'),
 	People = mongoose.model('Person'),
+	CustomerProfile = mongoose.model('CustomerProfile'),
 	Event = mongoose.model('Event'),
 	multer = require('multer'),
 	mkdirp = require('mkdirp'),
 	passportService = require('./passport'),
 	passport = require('passport');
-	
-	
-    var requireAuth = passport.authenticate('jwt', { session: false }),
-        requireLogin = passport.authenticate('local', { session: false });
+
+
+var requireAuth = passport.authenticate('jwt', { session: false }),
+	requireLogin = passport.authenticate('local', { session: false });
 
 module.exports = function (app) {
 	app.use('/', router);
 
 	router.route('/login')
-    	.post(requireLogin, login);
+		.post(requireLogin, login);
 
 	router.route("/docs").get(function (req, res, next) {
 		console.log('Get All Docs');
@@ -41,46 +42,46 @@ module.exports = function (app) {
 	router.route("/docs/:id").get(function (req, res, next) {
 		console.log('Get user ' + req.params.id);
 		Model.findById(req.params.id)
-			            .then(doc => {
-				                if (doc) {
-					                    res.status(200).json(doc);
-				                } else {
-					                    res.status(404).json({ message: "No doc found" });
-				                }
-			            })
-			            .catch(error => {
-				                return next(error);
-			            });
+			.then(doc => {
+				if (doc) {
+					res.status(200).json(doc);
+				} else {
+					res.status(404).json({ message: "No doc found" });
+				}
+			})
+			.catch(error => {
+				return next(error);
+			});
 	});
 
 	router.route("/docs/type/:type").get(function (req, res, next) {
 		console.log('Get doc ' + req.params.type);
 		Model.find({ type: req.params.type })
-			            .then(doc => {
-				                if (doc) {
-					                    res.status(200).json(doc);
-				                } else {
-					                    res.status(404).json({ message: "No doc found" });
-				                }
-			            })
-			            .catch(error => {
-				                return next(error);
-			            });
+			.then(doc => {
+				if (doc) {
+					res.status(200).json(doc);
+				} else {
+					res.status(404).json({ message: "No doc found" });
+				}
+			})
+			.catch(error => {
+				return next(error);
+			});
 	});
 
 	router.route("/docs/name/:name").get(function (req, res, next) {
 		console.log('Get doc ' + req.params.name);
 		Model.find({ name: req.params.name })
-			            .then(doc => {
-				                if (doc) {
-					                    res.status(200).json(doc);
-				                } else {
-					                    res.status(404).json({ message: "No doc found" });
-				                }
-			            })
-			            .catch(error => {
-				                return next(error);
-			            });
+			.then(doc => {
+				if (doc) {
+					res.status(200).json(doc);
+				} else {
+					res.status(404).json({ message: "No doc found" });
+				}
+			})
+			.catch(error => {
+				return next(error);
+			});
 	});
 
 	router.route('/docs').post(function (req, res, next) {
@@ -109,12 +110,12 @@ module.exports = function (app) {
 	router.route('/docs/:id').delete(function (req, res, next) {
 		console.log('Delete doc ' + req.params.id);
 		Model.remove({ _id: req.params.id })
-			        .then(doc => {
-				            res.status(200).json({ msg: "Document Deleted" });
-			        })
-			        .catch(error => {
-				            return next(error);
-			        });
+			.then(doc => {
+				res.status(200).json({ msg: "Document Deleted" });
+			})
+			.catch(error => {
+				return next(error);
+			});
 	});
 
 	var storage = multer.diskStorage({
@@ -357,7 +358,7 @@ module.exports = function (app) {
 
 	router.route("/questions/quiz/:quiz").get(function (req, res, next) {
 		console.log('Get All questions');
-		var query = Question.find({unit: req.params.quiz})
+		var query = Question.find({ unit: req.params.quiz })
 			.sort(req.query.order)
 			.exec()
 			.then(result => {
@@ -470,7 +471,6 @@ module.exports = function (app) {
 
 	router.route('/people').post(function (req, res, next) {
 		console.log('Create people');
-console.log(req.body)		
 		var doc = new People(req.body);
 		doc.save()
 			.then(result => {
@@ -502,4 +502,34 @@ console.log(req.body)
 				return next(error);
 			});
 	});
+
+
+	router.route("/profile/:id").get(function (req, res, next) {
+		console.log('Get profile ' + req.params.id);
+		CustomerProfile.findById(req.params.id)
+			.then(doc => {
+				if (doc) {
+					res.status(200).json(doc);
+				} else {
+					res.status(404).json({ message: "No profile found" });
+				}
+			})
+			.catch(error => {
+				return next(error);
+			}); 
+	});
+
+	router.route('/profile').post(function (req, res, next) {
+		console.log('Create profile');
+		console.log(req.body)
+		var profile = new CustomerProfile(req.body);
+		profile.save()
+			.then(result => {
+				res.status(201).json(result);
+			})
+			.catch(err => {
+				return next(err);
+			});
+	});
+
 };

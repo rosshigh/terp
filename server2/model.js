@@ -1,0 +1,37 @@
+var Mongoose = require('mongoose'),
+  Schema = Mongoose.Schema;
+
+  var CustomerProfileSchema = new Schema({
+	name: { type: String },
+	loyalityPoints: { type: Number},
+	creditCardNo: { type: String },
+	expirationDate: { type: String }
+});
+
+module.exports = Mongoose.model('CustomerProfile', CustomerProfileSchema)
+
+var ProductSchema = new Schema({
+	name: { type: String },
+	price: { type: Number},
+	description: { type: String },
+    photo: { type: String },
+});
+
+module.exports = Mongoose.model('Product', ProductSchema)
+
+var ReviewSchema = new Schema({
+	product: { type: Schema.Types.ObjectId },
+	review: { type: String},
+    customerName: { type: String },
+    creationDate: { type: Date, default: Date.now}
+});
+
+module.exports = Mongoose.model('Review', ReviewSchema)
+
+var OrderSchema = new Schema({
+    customer: { type: Schema.Types.ObjectId },
+	price: { type: Number},
+	status: { type: String }
+});
+
+module.exports = Mongoose.model('Orders', OrderSchema)

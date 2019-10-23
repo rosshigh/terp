@@ -47,3 +47,13 @@ var PeopleSchema = new Schema({
 });
 
 module.exports = Mongoose.model('Person', PeopleSchema)
+
+
+var CustomerProfileSchema = new Schema({
+	name: { type: String },
+	loyalityPoints: { type: Number},
+	creditCardNo: { type: String },
+	expirationDate: { type: String }
+});
+
+module.exports = Mongoose.model('CustomerProfile', CustomerProfileSchema)

@@ -10,7 +10,11 @@ var express = require('express'),
 	multer = require('multer'),
 	mkdirp = require('mkdirp'),
 	passportService = require('./passport'),
-	passport = require('passport');
+	passport = require('passport'),
+	Product = mongoose.model('Product'),
+    Review = mongoose.model('Review'),
+    Orders = mongoose.model('Orders').
+    CustomerProfile = mongoose.model('CustomerProfile');
 
 
 var requireAuth = passport.authenticate('jwt', { session: false }),
@@ -504,32 +508,285 @@ module.exports = function (app) {
 	});
 
 
-	router.route("/profile/:id").get(function (req, res, next) {
-		console.log('Get profile ' + req.params.id);
-		CustomerProfile.findById(req.params.id)
-			.then(doc => {
-				if (doc) {
-					res.status(200).json(doc);
-				} else {
-					res.status(404).json({ message: "No profile found" });
-				}
-			})
-			.catch(error => {
-				return next(error);
-			}); 
-	});
+	router.route("/profile").get(function (req, res, next) {
+        console.log('Get All Docs');
+        var query = CustomerProfile.find()
+            .sort(req.query.order)
+            .exec()
+            .then(result => {
+                if (result && result.length) {
+                    res.status(200).json(result);
+                } else {
+                    res.status(404).json({ message: 'No docs' });
+                }
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
 
-	router.route('/profile').post(function (req, res, next) {
-		console.log('Create profile');
-		console.log(req.body)
-		var profile = new CustomerProfile(req.body);
-		profile.save()
-			.then(result => {
-				res.status(201).json(result);
-			})
-			.catch(err => {
-				return next(err);
-			});
-	});
+    router.route("/profile/:id").get(function (req, res, next) {
+        console.log('Get profile ' + req.params.id);
+        CustomerProfile.findById(req.params.id)
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No profile found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/profile').post(function (req, res, next) {
+        console.log('Create profile');
+        var profile = new CustomerProfile(req.body);
+        profile.save()
+            .then(result => {
+                res.status(201).json(result);
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route('/profile/:id').put(function (req, res, next) {
+        console.log('Update people ' + req.params.id);
+        CustomerProfile.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, multi: false })
+            .then(doc => {
+                res.status(200).json(doc);
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/profile/:id').delete(function (req, res, next) {
+        console.log('Delete profile ' + req.params.id);
+        CustomerProfile.remove({ _id: req.params.id })
+            .then(doc => {
+                res.status(200).json({ msg: "Profile Deleted" });
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route("/products").get(function (req, res, next) {
+        console.log('Get All products');
+        var query = Product.find()
+            .sort(req.query.order)
+            .exec()
+            .then(result => {
+                if (result && result.length) {
+                    res.status(200).json(result);
+                } else {
+                    res.status(404).json({ message: 'No docs' });
+                }
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route("/products/:id").get(function (req, res, next) {
+        console.log('Get product ' + req.params.id);
+        Product.findById(req.params.id)
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No profile found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/products').post(function (req, res, next) {
+        console.log('Create product');
+        var product = new Product(req.body);
+        product.save()
+            .then(result => {
+                res.status(201).json(result);
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route('/products/:id').put(function (req, res, next) {
+        console.log('Update product ' + req.params.id);
+        Product.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, multi: false })
+            .then(doc => {
+                res.status(200).json(doc);
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/products/:id').delete(function (req, res, next) {
+        console.log('Delete product ' + req.params.id);
+        Product.remove({ _id: req.params.id })
+            .then(doc => {
+                res.status(200).json({ msg: "Product Deleted" });
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route("/review").get(function (req, res, next) {
+        console.log('Get All review');
+        var query = Review.find()
+            .sort(req.query.order)
+            .exec()
+            .then(result => {
+                if (result && result.length) {
+                    res.status(200).json(result);
+                } else {
+                    res.status(404).json({ message: 'No reviews' });
+                }
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route("/review/product/:id").get(function (req, res, next) {
+        console.log('Get All review');
+        var query = Review.find({product: req.params.id})
+            .sort({creationDate: 1})
+            .exec()
+            .then(result => {
+                if (result && result.length) {
+                    res.status(200).json(result);
+                } else {
+                    res.status(404).json({ message: 'No reviews' });
+                }
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route("/review/:id").get(function (req, res, next) {
+        console.log('Get review ' + req.params.id);
+        Review.findById(req.params.id)
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No review found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/review').post(function (req, res, next) {
+        console.log('Create review');
+        var review = new Review(req.body);
+        review.save()
+            .then(result => {
+                res.status(201).json(result);
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route('/review/:id').put(function (req, res, next) {
+        console.log('Update review ' + req.params.id);
+        Review.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, multi: false })
+            .then(doc => {
+                res.status(200).json(doc);
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/review/:id').delete(function (req, res, next) {
+        console.log('Delete review ' + req.params.id);
+        Review.remove({ _id: req.params.id })
+            .then(doc => {
+                res.status(200).json({ msg: "review Deleted" });
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route("/orders").get(function (req, res, next) {
+        console.log('Get All orders');
+        var query = Orders.find()
+            .sort(req.query.order)
+            .exec()
+            .then(result => {
+                if (result && result.length) {
+                    res.status(200).json(result);
+                } else {
+                    res.status(404).json({ message: 'No orders' });
+                }
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route("/orders/:id").get(function (req, res, next) {
+        console.log('Get order ' + req.params.id);
+        Orders.findById(req.params.id)
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No order found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/orders').post(function (req, res, next) {
+        console.log('Create order');
+        var order = new Orders(req.body);
+        order.save()
+            .then(result => {
+                res.status(201).json(result);
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route('/orders/:id').put(function (req, res, next) {
+        console.log('Update order ' + req.params.id);
+        Orders.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, multi: false })
+            .then(doc => {
+                res.status(200).json(doc);
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/orders/:id').delete(function (req, res, next) {
+        console.log('Delete order ' + req.params.id);
+        Orders.remove({ _id: req.params.id })
+            .then(doc => {
+                res.status(200).json({ msg: "Order Deleted" });
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
 
 };

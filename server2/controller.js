@@ -3,7 +3,8 @@ var express = require('express'),
     mongoose = require('mongoose'),
     Product = mongoose.model('Product'),
     Review = mongoose.model('Review'),
-    Orders = mongoose.model('Orders').
+    Orders = mongoose.model('Orders'),
+    Ingredients = mongoose.model('Ingredients'),
     CustomerProfile = mongoose.model('CustomerProfile');
 
 
@@ -285,6 +286,87 @@ module.exports = function (app) {
         Orders.remove({ _id: req.params.id })
             .then(doc => {
                 res.status(200).json({ msg: "Order Deleted" });
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route("/ingredients").get(function (req, res, next) {
+        console.log('Get All ingredients');
+        var query = Ingredients.find()
+            .sort(req.query.order)
+            .exec()
+            .then(result => {
+                if (result && result.length) {
+                    res.status(200).json(result);
+                } else {
+                    res.status(404).json({ message: 'No ingredients' });
+                }
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route("/ingredients/:id").get(function (req, res, next) {
+        console.log('Get ingredients ' + req.params.id);
+        Ingredients.findById(req.params.id)
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No ingredients found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route("/ingredients/product/:id").get(function (req, res, next) {
+        console.log('Get ingredients ' + req.params.id);
+        Ingredients.find({productId: req.params.id})
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No ingredients found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/ingredients').post(function (req, res, next) {
+        console.log('Create ingredients');
+        var order = new Ingredients(req.body);
+        order.save()
+            .then(result => {
+                res.status(201).json(result);
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route('/ingredients/:id').put(function (req, res, next) {
+        console.log('Update ingredients ' + req.params.id);
+        Ingredients.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, multi: false })
+            .then(doc => {
+                res.status(200).json(doc);
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/ingredients/:id').delete(function (req, res, next) {
+        console.log('Delete ingredients ' + req.params.id);
+        Ingredients.remove({ _id: req.params.id })
+            .then(doc => {
+                res.status(200).json({ msg: "Ingredients Deleted" });
             })
             .catch(error => {
                 return next(error);

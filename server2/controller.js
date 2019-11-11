@@ -424,7 +424,7 @@ module.exports = function (app) {
             });
     });
 
-    router.route('/favorites').post(upload.none(), function (req, res, next) {
+    router.route('/favorites').post(function (req, res, next) {
         console.log('Create favorites');
         var order = new Favorites(req.body);
         order.save()

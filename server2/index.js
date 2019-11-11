@@ -20,6 +20,7 @@ mongoose.connection.once('open', function callback() {
 console.log("Attaching plugins");
 app.use(bodyParser.json({limit: '1000mb'}));
 app.use(bodyParser.urlencoded({limit: '1000mb', extended: true}));
+app.use(upload.array()); 
 
 var documents = require('./model');
 var controllers = require('./controller')(app);

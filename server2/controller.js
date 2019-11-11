@@ -408,7 +408,8 @@ module.exports = function (app) {
 
     router.route("/favorites/customer/:id").get(function (req, res, next) {
         console.log('Get favorites ' + req.params.id);
-        Favorites.find({customerId: req.params.id})
+        let query = Favorites.find({customerId: req.params.id})
+        query.populate({ path: 'productId', model: 'Product', select: 'name photo'}).exec()
             .then(doc => {
                 if (doc) {
                     res.status(200).json(doc);

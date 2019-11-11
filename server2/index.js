@@ -1,6 +1,8 @@
 var express = require('express'),
 	mongoose = require('mongoose'),
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser'),
+	multer = require('multer'),
+    upload = multer();
 
 var app = express();	
 

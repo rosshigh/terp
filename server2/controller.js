@@ -6,7 +6,9 @@ var express = require('express'),
     Orders = mongoose.model('Orders'),
     Ingredients = mongoose.model('Ingredients'),
     Favorites = mongoose.model('Favorites'),
-    CustomerProfile = mongoose.model('CustomerProfile');
+    CustomerProfile = mongoose.model('CustomerProfile'),
+    multer = require('multer'),
+    upload = multer();
 
 
 module.exports = function (app) {
@@ -163,8 +165,8 @@ module.exports = function (app) {
 
     router.route("/review/product/:id").get(function (req, res, next) {
         console.log('Get All review');
-        var query = Review.find({product: req.params.id})
-            .sort({creationDate: 1})
+        var query = Review.find({ product: req.params.id })
+            .sort({ creationDate: 1 })
             .exec()
             .then(result => {
                 if (result && result.length) {
@@ -327,7 +329,7 @@ module.exports = function (app) {
 
     router.route("/ingredients/product/:id").get(function (req, res, next) {
         console.log('Get ingredients ' + req.params.id);
-        Ingredients.find({productId: req.params.id})
+        Ingredients.find({ productId: req.params.id })
             .then(doc => {
                 if (doc) {
                     res.status(200).json(doc);
@@ -359,7 +361,7 @@ module.exports = function (app) {
                 res.status(200).json(doc);
             })
             .catch(error => {
-                return next(error); 
+                return next(error);
             });
     });
 
@@ -408,8 +410,8 @@ module.exports = function (app) {
 
     router.route("/favorites/customer/:id").get(function (req, res, next) {
         console.log('Get favorites ' + req.params.id);
-        let query = Favorites.find({customerId: req.params.id})
-        query.populate({ path: 'productId', model: 'Product', select: 'name photo'}).exec()
+        let query = Favorites.find({ customerId: req.params.id })
+        query.populate({ path: 'productId', model: 'Product', select: 'name photo' }).exec()
             .then(doc => {
                 if (doc) {
                     res.status(200).json(doc);
@@ -422,7 +424,7 @@ module.exports = function (app) {
             });
     });
 
-    router.route('/favorites').post(function (req, res, next) {
+    router.route('/favorites').post(upload.none(), function (req, res, next) {
         console.log('Create favorites');
         var order = new Favorites(req.body);
         order.save()
@@ -441,7 +443,7 @@ module.exports = function (app) {
                 res.status(200).json(doc);
             })
             .catch(error => {
-                return next(error); 
+                return next(error);
             });
     });
 

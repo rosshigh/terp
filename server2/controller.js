@@ -5,6 +5,7 @@ var express = require('express'),
     Review = mongoose.model('Review'),
     Orders = mongoose.model('Orders'),
     Ingredients = mongoose.model('Ingredients'),
+    Favorites = mongoose.model('Favorites'),
     CustomerProfile = mongoose.model('CustomerProfile');
 
 
@@ -367,6 +368,87 @@ module.exports = function (app) {
         Ingredients.remove({ _id: req.params.id })
             .then(doc => {
                 res.status(200).json({ msg: "Ingredients Deleted" });
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route("/favorites").get(function (req, res, next) {
+        console.log('Get All favorites');
+        var query = Favorites.find()
+            .sort(req.query.order)
+            .exec()
+            .then(result => {
+                if (result && result.length) {
+                    res.status(200).json(result);
+                } else {
+                    res.status(404).json({ message: 'No favorites' });
+                }
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route("/favorites/:id").get(function (req, res, next) {
+        console.log('Get favorites ' + req.params.id);
+        Favorites.findById(req.params.id)
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No favorites found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route("/favorites/customer/:id").get(function (req, res, next) {
+        console.log('Get favorites ' + req.params.id);
+        Favorites.find({customerId: req.params.id})
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No favorites found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/favorites').post(function (req, res, next) {
+        console.log('Create favorites');
+        var order = new Favorites(req.body);
+        order.save()
+            .then(result => {
+                res.status(201).json(result);
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route('/favorites/:id').put(function (req, res, next) {
+        console.log('Update favorites ' + req.params.id);
+        Favorites.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, multi: false })
+            .then(doc => {
+                res.status(200).json(doc);
+            })
+            .catch(error => {
+                return next(error); 
+            });
+    });
+
+    router.route('/favorites/:id').delete(function (req, res, next) {
+        console.log('Delete favorites ' + req.params.id);
+        Favorites.remove({ _id: req.params.id })
+            .then(doc => {
+                res.status(200).json({ msg: "favorites Deleted" });
             })
             .catch(error => {
                 return next(error);

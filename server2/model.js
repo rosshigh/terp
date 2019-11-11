@@ -43,3 +43,10 @@ var OrderSchema = new Schema({
 });
 
 module.exports = Mongoose.model('Orders', OrderSchema)
+
+var FavoritesSchema = new Schema({
+	customerId: { type: Schema.Types.ObjectId },
+	productId: { type: Schema.Types.ObjectId }, 
+});
+
+module.exports = Mongoose.model('Favorites', FavoritesSchema)

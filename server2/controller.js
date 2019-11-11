@@ -358,7 +358,7 @@ module.exports = function (app) {
                 res.status(200).json(doc);
             })
             .catch(error => {
-                return next(error);
+                return next(error); 
             });
     });
 

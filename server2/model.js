@@ -20,7 +20,7 @@ var ProductSchema = new Schema({
 module.exports = Mongoose.model('Product', ProductSchema)
 
 var RecipeSchema = new Schema({
-	productId: { type: Schema.Types.ObjectId },
+	productId: { type: Schema.Types.ObjectId }, 
 	name: { type: String },
 	calories: { type: Number}
 });

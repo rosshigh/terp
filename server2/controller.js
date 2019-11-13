@@ -263,6 +263,7 @@ module.exports = function (app) {
 
     router.route('/orders').post(function (req, res, next) {
         console.log('Create order');
+        console.log(req.body)
         var order = new Orders(req.body);
         order.save()
             .then(result => {

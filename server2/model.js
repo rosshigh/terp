@@ -37,16 +37,17 @@ var ReviewSchema = new Schema({
 module.exports = Mongoose.model('Review', ReviewSchema)
 
 var OrderSchema = new Schema({
-    customer: { type: Schema.Types.ObjectId },
+    customerId: { type: Schema.Types.ObjectId },
+	productId: { type: Schema.Types.ObjectId },
 	price: { type: Number},
-	status: { type: String }
+	status: { type: String, default: 'New' }
 });
 
 module.exports = Mongoose.model('Orders', OrderSchema)
 
 var FavoritesSchema = new Schema({
-	CustomerId: { type: Schema.Types.ObjectId },
-	ProductId: { type: Schema.Types.ObjectId }, 
+	customerId: { type: Schema.Types.ObjectId },
+	productId: { type: Schema.Types.ObjectId }, 
 });
 
 module.exports = Mongoose.model('Favorites', FavoritesSchema)

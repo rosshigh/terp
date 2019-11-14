@@ -261,6 +261,22 @@ module.exports = function (app) {
             });
     });
 
+    router.route("/orders/customer/:id").get(function (req, res, next) {
+        console.log('Get order for customer' + req.params.id);
+        let query = Orders.findOne({customerId: req.params.id})
+        query.populate({ path: 'productId', model: 'Product', select: 'name' }).exec()
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No order found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
     router.route('/orders').post(function (req, res, next) {
         console.log('Create order');
         console.log(req.body)
@@ -412,10 +428,17 @@ module.exports = function (app) {
     router.route("/favorites/customer/:id").get(function (req, res, next) {
         console.log('Get favorites ' + req.params.id);
         let query = Favorites.find({ customerId: req.params.id })
-        query.populate({ path: 'productId', model: 'Product', select: 'name photo' }).exec()
-            .then(doc => {
+        // query.populate({ path: 'productId', model: 'Product', select: 'name photo price' })
+        .exec()
+            .then(doc => {              
                 if (doc) {
-                    res.status(200).json(doc);
+                    let products = [];
+                    doc.forEach(item => {
+                        products.push(item.productId);
+                    })
+                    Product.find({_id : {$in: products}}, function(err, results){
+                        res.status(200).json(results);
+                    })
                 } else {
                     res.status(404).json({ message: "No favorites found" });
                 }
@@ -425,8 +448,25 @@ module.exports = function (app) {
             });
     });
 
+    // router.route("/favorites/customer/:id").get(function (req, res, next) {
+    //     console.log('Get favorites ' + req.params.id);
+    //     let query = Favorites.find({ customerId: req.params.id })
+    //     query.populate({ path: 'productId', model: 'Product', select: 'name photo price' }).exec()
+    //         .then(doc => {
+    //             if (doc) {
+    //                 res.status(200).json(doc);
+    //             } else {
+    //                 res.status(404).json({ message: "No favorites found" });
+    //             }
+    //         })
+    //         .catch(error => {
+    //             return next(error);
+    //         });
+    // });
+
     router.route('/favorites').post(function (req, res, next) {
         console.log('Create favorites');
+        console.log(req.body)
         var order = new Favorites(req.body);
         order.save()
             .then(result => {

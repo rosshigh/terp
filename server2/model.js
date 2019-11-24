@@ -51,3 +51,11 @@ var FavoritesSchema = new Schema({
 });
 
 module.exports = Mongoose.model('Favorites', FavoritesSchema)
+
+var PromotionsSchema = new Schema({
+	productId: { type: Schema.Types.ObjectId }, 
+	dateEnds: { type: Date },
+	price: { type: Number }
+});
+
+module.exports = Mongoose.model('Promotions', PromotionsSchema)

@@ -7,6 +7,7 @@ var express = require('express'),
     Ingredients = mongoose.model('Ingredients'),
     Favorites = mongoose.model('Favorites'),
     CustomerProfile = mongoose.model('CustomerProfile'),
+    Promotions = mongoose.model('Promotions'),
     multer = require('multer'),
     upload = multer();
 
@@ -168,8 +169,7 @@ module.exports = function (app) {
         var query = Review.find({ product: req.params.id })
             .sort({ creationDate: 1 })
             .exec()
-            .then(result => {
-                if (result && result.length) {
+            .then(result => {                if (result && result.length) {
                     res.status(200).json(result);
                 } else {
                     res.status(404).json({ message: 'No reviews' });
@@ -197,6 +197,7 @@ module.exports = function (app) {
 
     router.route('/review').post(function (req, res, next) {
         console.log('Create review');
+        console.log(req.body)
         var review = new Review(req.body);
         review.save()
             .then(result => {
@@ -217,7 +218,7 @@ module.exports = function (app) {
                 return next(error);
             });
     });
-
+ 
     router.route('/review/:id').delete(function (req, res, next) {
         console.log('Delete review ' + req.params.id);
         Review.remove({ _id: req.params.id })
@@ -232,6 +233,7 @@ module.exports = function (app) {
     router.route("/orders").get(function (req, res, next) {
         console.log('Get All orders');
         var query = Orders.find()
+        query.populate({ path: 'productId', model: 'Product', select: 'name' })
             .sort(req.query.order)
             .exec()
             .then(result => {
@@ -263,9 +265,10 @@ module.exports = function (app) {
 
     router.route("/orders/customer/:id").get(function (req, res, next) {
         console.log('Get order for customer' + req.params.id);
-        let query = Orders.findOne({customerId: req.params.id})
-        query.populate({ path: 'productId', model: 'Product', select: 'name' }).exec()
-            .then(doc => {
+        let query = Orders.find({customerId: req.params.id})
+        query.populate({ path: 'productId', model: 'Product', select: 'name' })
+        .exec()
+            .then(doc => {               
                 if (doc) {
                     res.status(200).json(doc);
                 } else {
@@ -428,10 +431,9 @@ module.exports = function (app) {
     router.route("/favorites/customer/:id").get(function (req, res, next) {
         console.log('Get favorites ' + req.params.id);
         let query = Favorites.find({ customerId: req.params.id })
-        // query.populate({ path: 'productId', model: 'Product', select: 'name photo price' })
         .exec()
             .then(doc => {              
-                if (doc) {
+                if (doc) {                   
                     let products = [];
                     doc.forEach(item => {
                         products.push(item.productId);
@@ -493,6 +495,76 @@ module.exports = function (app) {
         Favorites.remove({ _id: req.params.id })
             .then(doc => {
                 res.status(200).json({ msg: "favorites Deleted" });
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route("/promotions").get(function (req, res, next) {
+        console.log('Get All promotions');
+        var query = Promotions
+        
+        .find()
+        query.populate({ path: 'productId', model: 'Product', select: 'name photo' })
+            .sort(req.query.order)
+            .exec()
+            .then(result => {
+                if (result && result.length) {
+                    res.status(200).json(result);
+                } else {
+                    res.status(404).json({ message: 'No promotions' });
+                }
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route("/promotions/:id").get(function (req, res, next) {
+        console.log('Get promotions ' + req.params.id);
+        Promotions.findById(req.params.id)
+            .then(doc => {
+                if (doc) {
+                    res.status(200).json(doc);
+                } else {
+                    res.status(404).json({ message: "No promotions found" });
+                }
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/promotions').post(function (req, res, next) {
+        console.log('Create promotions');
+        console.log(req.body)
+        var order = new Promotions(req.body);
+        order.save()
+            .then(result => {
+                res.status(201).json(result);
+            })
+            .catch(err => {
+                return next(err);
+            });
+    });
+
+    router.route('/promotions/:id').put(function (req, res, next) {
+        console.log('Update promotions ' + req.params.id);
+        Promotions.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true, multi: false })
+            .then(doc => {
+                res.status(200).json(doc);
+            })
+            .catch(error => {
+                return next(error);
+            });
+    });
+
+    router.route('/promotions/:id').delete(function (req, res, next) {
+        console.log('Delete promotions ' + req.params.id);
+        Promotions.remove({ _id: req.params.id })
+            .then(doc => {
+                res.status(200).json({ msg: "promotions Deleted" });
             })
             .catch(error => {
                 return next(error);

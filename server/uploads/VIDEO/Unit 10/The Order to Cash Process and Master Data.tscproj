@@ -1,0 +1,749 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "targetLoudness" : -18.0,
+  "shouldApplyLoudnessNormalization" : true,
+  "videoPlaybackRate" : 30,
+  "audioPlaybackRate" : 44100,
+  "width" : 1920.0,
+  "height" : 1080.0,
+  "version" : "3.0",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia",
+    "platform" : "Windows",
+    "version" : "19.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\ProgramData\\TechSmith\\Camtasia Studio 19\\Library 4.0\\Camtasia Libraries\\Camtasia 2019\\Intros\\spinningcomputer.asset\\Motion Graphics - Intro Clips - spinningcomputer-91.mp4",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20190205T165848",
+      "sourceTracks" : [
+        {
+          "range" : [0, 228999997],
+          "type" : 0,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : "10000000/333333",
+          "bitDepth" : 24,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "assetLibraryId" : "113ccc3d-11c8-4776-9fae-438b2a6334cd"
+      }
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\Users\\rhigh\\Music\\08 JoJo.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20140405T192920",
+      "sourceTracks" : [
+        {
+          "range" : [0, 2477104761],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -19.4892453551493,
+          "peakLevel" : 0.874894797801971,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 3,
+      "src" : "C:\\Users\\rhigh\\OneDrive\\Documents\\Camtasia\\Rec 06-05-19.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20190605T140719",
+      "sourceTracks" : [
+        {
+          "range" : [0, 7467],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : "Rec 06-05-19.trec;"
+        },
+        {
+          "range" : [0, 10960896],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -28.5141437390957,
+          "peakLevel" : 0.48431396484375,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 10974208],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : 0.0,
+          "peakLevel" : 0.0,
+          "metaData" : ""
+        }
+      ]
+    }
+  ],
+  "timeline" : {
+    "id" : 4,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "duration" : 251.966666666667,
+          "title" : "",
+          "type" : "",
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                  {
+                    "id" : 5,
+                    "_type" : "UnifiedMedia",
+                    "video" : 
+                        {
+                          "id" : 6,
+                          "_type" : "ScreenVMFile",
+                          "src" : 3,
+                          "trackNumber" : 0,
+                          "attributes" : {
+                            "ident" : "Rec 06-05-19"
+                          },
+                          "parameters" : {
+                            "cursorScale" : {
+                              "type" : "double",
+                              "defaultValue" : 1.0,
+                              "interp" : "linr"
+                            },
+                            "cursorOpacity" : {
+                              "type" : "double",
+                              "defaultValue" : 1.0,
+                              "interp" : "linr"
+                            }
+                          },
+                          "effects" : [
+
+                          ],
+                          "start" : 300,
+                          "duration" : 7259,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 7259,
+                          "scalar" : 1,
+                          "animationTracks" : {
+
+                          }
+                        },
+                    "audio" : 
+                        {
+                          "id" : 7,
+                          "_type" : "AMFile",
+                          "src" : 3,
+                          "trackNumber" : 2,
+                          "attributes" : {
+                            "ident" : "",
+                            "sampleRate" : 44100,
+                            "bitDepth" : 16,
+                            "gain" : 1.0,
+                            "mixToMono" : false
+                          },
+                            "channelNumber" : "0,1",
+                          "effects" : [
+
+                          ],
+                          "start" : 300,
+                          "duration" : 7259,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 7259,
+                          "scalar" : 1,
+                          "animationTracks" : {
+
+                          }
+                        }
+,
+                    "start" : 300,
+                    "duration" : 7259,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 7465,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "AutoAppliedSmartFocus" : "False",
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                  {
+                    "id" : 8,
+                    "_type" : "Group",
+                    "parameters" : {
+                      "volume" : 1.0
+                    },
+                    "tracks" : [
+                      {
+                        "trackIndex" : 0,
+                        "medias" : [
+                          {
+                            "id" : 9,
+                            "_type" : "Group",
+                            "parameters" : {
+                              "volume" : 1.0
+                            },
+                            "tracks" : [
+                              {
+                                "trackIndex" : 0,
+                                "medias" : [
+                                  {
+                                    "id" : 10,
+                                    "_type" : "StitchedMedia",
+                                    "minMediaStart" : 0,
+                                    "attributes" : {
+                                      "ident" : "laptop-open-background",
+                                      "gain" : 1.0,
+                                      "mixToMono" : false
+                                    },
+                                    "parameters" : {
+                                      "cursorOpacity" : 1.0,
+                                      "cursorScale" : 1.0
+                                    },
+                                    "medias" : [
+                                        {
+                                          "id" : 11,
+                                          "_type" : "VMFile",
+                                          "src" : 1,
+                                          "trackNumber" : 0,
+                                          "attributes" : {
+                                            "ident" : "laptop-open-background"
+                                          },
+                                          "effects" : [
+
+                                          ],
+                                          "start" : 0,
+                                          "duration" : 100,
+                                          "mediaStart" : 0,
+                                          "mediaDuration" : 100,
+                                          "scalar" : 1,
+                                          "metadata" : {
+                                            "WinSubProjectDisplayName" : "",
+                                            "clipSpeedAttribute" : false
+                                          },
+                                          "animationTracks" : {
+
+                                          }
+                                        },
+                                        {
+                                          "id" : 12,
+                                          "_type" : "IMFile",
+                                          "src" : 1,
+                                          "trackNumber" : 0,
+                                          "trimStartSum" : 0,
+                                          "attributes" : {
+                                            "ident" : "laptop-open-background"
+                                          },
+                                          "effects" : [
+
+                                          ],
+                                          "start" : 100,
+                                          "duration" : 90,
+                                          "mediaStart" : 99,
+                                          "mediaDuration" : 1,
+                                          "scalar" : 1,
+                                          "metadata" : {
+                                            "WinSubProjectDisplayName" : ""
+                                          },
+                                          "animationTracks" : {
+
+                                          }
+                                        },
+                                        {
+                                          "id" : 13,
+                                          "_type" : "VMFile",
+                                          "src" : 1,
+                                          "trackNumber" : 0,
+                                          "attributes" : {
+                                            "ident" : "laptop-open-background"
+                                          },
+                                          "effects" : [
+
+                                          ],
+                                          "start" : 190,
+                                          "duration" : 587,
+                                          "mediaStart" : 100,
+                                          "mediaDuration" : 587,
+                                          "scalar" : 1,
+                                          "metadata" : {
+                                            "WinSubProjectDisplayName" : "",
+                                            "clipSpeedAttribute" : false
+                                          },
+                                          "animationTracks" : {
+
+                                          }
+                                        }
+                                    ],
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 0,
+                                    "duration" : 191,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 191,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+
+                                    }
+                                  },
+                                  {
+                                    "id" : 14,
+                                    "_type" : "VMFile",
+                                    "src" : 1,
+                                    "trackNumber" : 0,
+                                    "attributes" : {
+                                      "ident" : "laptop-open-background"
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 191,
+                                    "duration" : 104,
+                                    "mediaStart" : 109,
+                                    "mediaDuration" : 104,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+
+                                    }
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+                                  "magnetic" : false,
+                                  "metadata" : {
+                                    "IsLocked" : "False",
+                                    "WinTrackHeight" : "0"
+                                  }
+                              }
+                            ],
+                            "attributes" : {
+                              "ident" : "Shapes",
+                              "gain" : 1.0,
+                              "mixToMono" : false
+                            },
+                            "effects" : [
+
+                            ],
+                            "start" : 0,
+                            "duration" : 295,
+                            "mediaStart" : 0.0,
+                            "mediaDuration" : 295.0,
+                            "scalar" : 1,
+                            "metadata" : {
+                              "IsGroupExpanded" : "False",
+                              "WinSubProjectDisplayName" : "Shapes",
+                              "clipSpeedAttribute" : false,
+                              "effectApplied" : "none",
+                              "isOpen" : false
+                            },
+                            "animationTracks" : {
+
+                            }
+                          }
+                        ],
+                          "ident" : "",
+                          "audioMuted" : false,
+                          "videoHidden" : false,
+                          "magnetic" : false,
+                          "metadata" : {
+                            "IsLocked" : "False",
+                            "WinTrackHeight" : "0",
+                            "trackHeight" : "48"
+                          }
+                      },
+                      {
+                        "trackIndex" : 1,
+                        "medias" : [
+                          {
+                            "id" : 15,
+                            "_type" : "Callout",
+                            "def" : {
+                              "kind" : "remix",
+                              "shape" : "text",
+                              "style" : "basic",
+                              "height" : 441.250000000173,
+                              "line-spacing" : 0.0,
+                              "width" : 819.999999998967,
+                              "word-wrap" : 1.0,
+                              "horizontal-alignment" : "center",
+                              "text" : "Unit 10\rThe Order-to-Cash Process\rand\rMaster Data",
+                              "vertical-alignment" : "center",
+                              "font" : {
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
+                                "name" : "Montserrat",
+                                "weight" : "Regular"
+                              },
+                              "textAttributes" : {
+                                "type" : "textAttributeList",
+                                "keyframes" : [
+                                  {
+                                    "endTime" : 0,
+                                    "time" : 0,
+                                    "value" : [{"name":"underline","rangeEnd":49,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":49,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontWeight","rangeEnd":49,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontSize","rangeEnd":49,"rangeStart":0,"value":75,"valueType":"double"},{"name":"strikethrough","rangeEnd":49,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":49,"rangeStart":0,"value":"(64,64,64,255)","valueType":"color"},{"name":"fontName","rangeEnd":49,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fontItalic","rangeEnd":49,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "duration" : 0
+                                  }
+                                ]
+                              }
+                            },
+                            "attributes" : {
+                              "autoRotateText" : true
+                            },
+                            "parameters" : {
+                              "translation0" : -28.7499999993803,
+                              "translation1" : 94.1250000000071
+                            },
+                            "effects" : [
+                                {
+                                  "_type" : "GenericBehaviorEffect",
+                                  "effectName" : "scale",
+                                  "start" : -1,
+                                  "duration" : 91                                ,
+                                  "in" : {
+                                    "attributes" : {
+                                      "name" : "grow",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : 1,
+                                      "suggestedDurationPerCharacter" : 18,
+                                      "overlapProportion" : "3/4",
+                                      "movement" : 30,
+                                      "springDamping" : 5.0,
+                                      "springStiffness" : 50.0,
+                                      "bounceBounciness" : 0.45
+                                    }
+                                  
+                                  },
+                                  "center" : {
+                                    "attributes" : {
+                                      "name" : "none",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : 0,
+                                      "secondsPerLoop" : 1,
+                                      "numberOfLoops" : -1,
+                                      "delayBetweenLoops" : 0,
+                                      "offsetBetweenCharacters" : 0
+                                    }
+                                  
+                                  },
+                                  "out" : {
+                                    "attributes" : {
+                                      "name" : "shrink",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : 1,
+                                      "suggestedDurationPerCharacter" : "29/2",
+                                      "overlapProportion" : "1/10",
+                                      "movement" : 11,
+                                      "springDamping" : 5.0,
+                                      "springStiffness" : 50.0,
+                                      "bounceBounciness" : 0.45
+                                    }
+                                  
+                                  }
+                                }
+                            ],
+                            "start" : 100,
+                            "duration" : 91,
+                            "mediaStart" : -1,
+                            "mediaDuration" : 91,
+                            "scalar" : 1,
+                            "metadata" : {
+                              "WinSubProjectDisplayName" : "",
+                              "clipSpeedAttribute" : false,
+                              "default-HAlign" : "center",
+                              "default-LineSpace" : 0.0,
+                              "default-VAlign" : "center",
+                              "default-text-attributes" : "[{\"name\":\"fontItalic\",\"rangeEnd\":18,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontWeight\",\"rangeEnd\":18,\"rangeStart\":0,\"value\":100,\"valueType\":\"int\"},{\"name\":\"underline\",\"rangeEnd\":18,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontName\",\"rangeEnd\":18,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"},{\"name\":\"fgColor\",\"rangeEnd\":18,\"rangeStart\":0,\"value\":\"(64,64,64,255)\",\"valueType\":\"color\"},{\"name\":\"strikethrough\",\"rangeEnd\":18,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontSize\",\"rangeEnd\":18,\"rangeStart\":0,\"value\":75,\"valueType\":\"double\"}]",
+                              "effectApplied" : "none"
+                            },
+                            "animationTracks" : {
+
+                            }
+                          }
+                        ],
+                          "ident" : "",
+                          "audioMuted" : false,
+                          "videoHidden" : false,
+                          "magnetic" : false,
+                          "metadata" : {
+                            "IsLocked" : "False",
+                            "WinTrackHeight" : "1.05102561619514e-311",
+                            "trackHeight" : "48"
+                          }
+                      }
+                    ],
+                    "attributes" : {
+                      "ident" : "spinningcomputer",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "assetProperties" : [
+                        {
+                          "type" : 0,
+                          "name" : "Title",
+                          "objects" : [ 15 ],
+                          "themeMappings" :  {
+                            "font-color" : "foreground-1",
+                            "font-family" : "font-1"
+                          }
+                        }
+                      ]
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2,
+                    "duration" : 295,
+                    "mediaStart" : 0.0,
+                    "mediaDuration" : 295.0,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "IsGroupExpanded" : "False",
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false,
+                      "effectApplied" : "none",
+                      "isOpen" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 16,
+                    "_type" : "AMFile",
+                    "src" : 3,
+                    "trackNumber" : 1,
+                    "attributes" : {
+                      "ident" : "Rec 06-05-19",
+                      "sampleRate" : 44100,
+                      "bitDepth" : 16,
+                      "gain" : 1.0,
+                      "mixToMono" : false
+                    },
+                      "channelNumber" : "0,1",
+                    "parameters" : {
+                      "volume" : 2.3469387755102
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 300,
+                    "duration" : 7259,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 7259,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 2,
+                "medias" : [
+                  {
+                    "id" : 17,
+                    "_type" : "AMFile",
+                    "src" : 2,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "08 JoJo",
+                      "sampleRate" : 44100,
+                      "bitDepth" : 16,
+                      "gain" : 1.0,
+                      "mixToMono" : false
+                    },
+                      "channelNumber" : "0,1",
+                    "parameters" : {
+                      "volume" : {
+                        "type" : "double",
+                        "keyframes" : [
+                          {
+                            "endTime" : 0,
+                            "time" : 0,
+                            "value" : 1.0,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 204,
+                            "time" : 204,
+                            "value" : 1.0,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 294,
+                            "time" : 294,
+                            "value" : 0.0,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 295,
+                            "time" : 295,
+                            "value" : 1.0,
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 2,
+                    "duration" : 294,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 294,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 3,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 4,
+                "medias" : [
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "magnetic" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      }
+    ],
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 64,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 0,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "C:\\Users\\rhigh\\AppData\\Local\\TechSmith\\Camtasia Studio\\19.0\\Auto-Saves\\Untitled Project4337901b.autosave.tscproj",
+    "CanvasZoom" : 49,
+    "Date" : "2019-06-05 09:00:42 AM",
+    "IsAutoSave" : "0",
+    "Language" : "ENU",
+    "ProfileName" : "MP4 only (up to 720p)",
+    "ProjectDimensionsChanged" : "0",
+    "Title" : "The Order to Cash Process and Master Data",
+    "audioNarrationNotes" : ""
+  },
+  "audioPlaybackRate" : 44100
+,
+  "themeFile" : null
+
+}

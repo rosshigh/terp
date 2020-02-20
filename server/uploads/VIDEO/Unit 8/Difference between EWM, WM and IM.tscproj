@@ -1,0 +1,2786 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "targetLoudness" : -18.0,
+  "shouldApplyLoudnessNormalization" : true,
+  "width" : 1920.0,
+  "height" : 1080.0,
+  "version" : "3.0",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia",
+    "platform" : "Windows",
+    "version" : "19.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\ProgramData\\TechSmith\\Camtasia Studio 19\\Library 4.0\\Camtasia Libraries\\Camtasia 2019\\Intros\\linewipe.asset\\Motion Graphics - Intro Clips - linewipe-91.png",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20190205T165848",
+      "sourceTracks" : [
+        {
+          "range" : [0, 1],
+          "type" : 1,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 0,
+          "bitDepth" : 32,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : ""
+        }
+      ],
+      "metadata" : {
+        "assetLibraryId" : "a492c94c-cb95-4254-b03b-3ad8fd84235f"
+      }
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\Users\\rhigh\\Music\\14 From _1941__ Swing, swing, swing.m4a",
+      "rect" : [0, 0, 0, 0],
+      "lastMod" : "20151011T143145",
+      "sourceTracks" : [
+        {
+          "range" : [0, 2650557821],
+          "type" : 2,
+          "editRate" : 10000000,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -17.9047475947085,
+          "peakLevel" : 1.00277173519135,
+          "metaData" : ""
+        }
+      ]
+    },
+    {
+      "id" : 3,
+      "src" : "C:\\Users\\rhigh\\OneDrive\\Documents\\Camtasia\\Rec 05-29-19_008.trec",
+      "rect" : [0, 0, 1920, 1080],
+      "lastMod" : "20190529T155532",
+      "sourceTracks" : [
+        {
+          "range" : [0, 12181],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1920, 1080],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "integratedLUFS" : 100.0,
+          "peakLevel" : -1.0,
+          "metaData" : "Rec 05-29-19_008.trec;"
+        },
+        {
+          "range" : [0, 17905664],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : -27.6602145485008,
+          "peakLevel" : 0.716339111328125,
+          "metaData" : ""
+        },
+        {
+          "range" : [0, 17907712],
+          "type" : 2,
+          "editRate" : 44100,
+          "trackRect" : [0, 0, 0, 0],
+          "sampleRate" : 44100,
+          "bitDepth" : 16,
+          "numChannels" : 2,
+          "integratedLUFS" : 0.0,
+          "peakLevel" : 0.0,
+          "metaData" : ""
+        }
+      ]
+    }
+  ],
+  "timeline" : {
+    "id" : 4,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "duration" : 415.033333333333,
+          "title" : "",
+          "type" : "",
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                  {
+                    "id" : 5,
+                    "_type" : "UnifiedMedia",
+                    "video" : 
+                        {
+                          "id" : 6,
+                          "_type" : "ScreenVMFile",
+                          "src" : 3,
+                          "trackNumber" : 0,
+                          "attributes" : {
+                            "ident" : "Rec 05-29-19_008"
+                          },
+                          "parameters" : {
+                            "cursorScale" : {
+                              "type" : "double",
+                              "defaultValue" : 1.0,
+                              "interp" : "linr"
+                            },
+                            "cursorOpacity" : {
+                              "type" : "double",
+                              "defaultValue" : 1.0,
+                              "interp" : "linr"
+                            }
+                          },
+                          "effects" : [
+
+                          ],
+                          "start" : 270,
+                          "duration" : 12181,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 12181,
+                          "scalar" : 1,
+                          "animationTracks" : {
+
+                          }
+                        },
+                    "audio" : 
+                        {
+                          "id" : 7,
+                          "_type" : "AMFile",
+                          "src" : 3,
+                          "trackNumber" : 2,
+                          "attributes" : {
+                            "ident" : "",
+                            "sampleRate" : 44100,
+                            "bitDepth" : 16,
+                            "gain" : 1.0,
+                            "mixToMono" : false
+                          },
+                            "channelNumber" : "0,1",
+                          "effects" : [
+
+                          ],
+                          "start" : 270,
+                          "duration" : 12181,
+                          "mediaStart" : 0,
+                          "mediaDuration" : 12181,
+                          "scalar" : 1,
+                          "animationTracks" : {
+
+                          }
+                        }
+,
+                    "start" : 270,
+                    "duration" : 12181,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 12181,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "AutoAppliedSmartFocus" : "False",
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                  {
+                    "id" : 8,
+                    "_type" : "Group",
+                    "parameters" : {
+                      "translation0" : 1.45519152283669e-10,
+                      "translation1" : 1.32331479107961e-10,
+                      "volume" : 1.0
+                    },
+                    "tracks" : [
+                      {
+                        "trackIndex" : 0,
+                        "medias" : [
+                          {
+                            "id" : 9,
+                            "_type" : "Group",
+                            "parameters" : {
+                              "translation0" : -1.45519152283669e-10,
+                              "translation1" : -1.32331479107961e-10,
+                              "volume" : 1.0
+                            },
+                            "tracks" : [
+                              {
+                                "trackIndex" : 0,
+                                "medias" : [
+                                  {
+                                    "id" : 10,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-rectangle",
+                                      "style" : "urban",
+                                      "fill-color-blue" : 0.235294117647059,
+                                      "fill-color-green" : 0.298039215686275,
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : 0.905882352941176,
+                                      "height" : 1080.0000000002,
+                                      "stroke-color-blue" : 0.777079198166942,
+                                      "stroke-color-green" : 0.93090625,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 0.113700037136884,
+                                      "stroke-width" : 0.0,
+                                      "width" : 1920.00000000019,
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : 2.43858266912866e-11,
+                                      "translation1" : 1.125499693444e-11
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 0,
+                                    "duration" : 100,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 100,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+
+                                    }
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+                                  "metadata" : {
+                                    "IsLocked" : "False",
+                                    "WinTrackHeight" : "0"
+                                  }
+                              },
+                              {
+                                "trackIndex" : 1,
+                                "medias" : [
+                                  {
+                                    "id" : 11,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-rectangle",
+                                      "style" : "abstract",
+                                      "fill-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.556862745098039,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 32,
+                                            "time" : 0,
+                                            "value" : 0.556862745098039,
+                                            "duration" : 32
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.454901960784314,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 32,
+                                            "time" : 0,
+                                            "value" : 0.454901960784314,
+                                            "duration" : 32
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.235294117647059,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 32,
+                                            "time" : 0,
+                                            "value" : 0.235294117647059,
+                                            "duration" : 32
+                                          }
+                                        ]
+                                      },
+                                      "height" : {
+                                        "type" : "double",
+                                        "defaultValue" : 6.95536632864869,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 32,
+                                            "time" : 0,
+                                            "value" : 784.000000000243,
+                                            "duration" : 32
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
+                                      "width" : {
+                                        "type" : "double",
+                                        "defaultValue" : 7.26449372104034,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 32,
+                                            "time" : 0,
+                                            "value" : 818.844444445516,
+                                            "duration" : 32
+                                          }
+                                        ]
+                                      },
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : -6.11635186942294e-11,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 32,
+                                            "time" : 0,
+                                            "value" : -6.11635186942294e-11,
+                                            "duration" : 32
+                                          }
+                                        ]
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -7.98650034994353e-12,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 32,
+                                            "time" : 0,
+                                            "value" : -7.98650034994353e-12,
+                                            "duration" : 32
+                                          }
+                                        ]
+                                      },
+                                      "rotation2" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.935769591402824,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 32,
+                                            "time" : 0,
+                                            "value" : 0.0,
+                                            "duration" : 32
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 10,
+                                    "duration" : 37,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 37,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+                                      "visual" : [
+                                        {
+                                          "endTime" : 32,
+                                          "duration" : 32,
+                                          "range" : [ 0, 32]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+                                  "metadata" : {
+                                    "IsLocked" : "False",
+                                    "WinTrackHeight" : "0"
+                                  }
+                              },
+                              {
+                                "trackIndex" : 2,
+                                "medias" : [
+                                  {
+                                    "id" : 12,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-rectangle",
+                                      "style" : "abstract",
+                                      "fill-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.235294117647059,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : 0.235294117647059,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.298039215686275,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : 0.298039215686275,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.905882352941176,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : 0.905882352941176,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "height" : {
+                                        "type" : "double",
+                                        "defaultValue" : 6.95536632864869,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : 1051.32817372388,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.777079198166942,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : 0.777079198166942,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.93090625,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : 0.93090625,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.113700037136884,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : 0.113700037136884,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "stroke-width" : 0.0,
+                                      "width" : {
+                                        "type" : "double",
+                                        "defaultValue" : 7.26449372104034,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : 1098.05387033492,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : -6.11635186942294e-11,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : -6.11635186942294e-11,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -7.98650034994353e-12,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : -7.98650034994353e-12,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      },
+                                      "rotation2" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.935769591402824,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 0,
+                                            "value" : -0.255182390620909,
+                                            "duration" : 25
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 17,
+                                    "duration" : 30,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 30,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+                                      "visual" : [
+                                        {
+                                          "endTime" : 25,
+                                          "duration" : 25,
+                                          "range" : [ 0, 25]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+                                  "metadata" : {
+                                    "IsLocked" : "False",
+                                    "WinTrackHeight" : "0"
+                                  }
+                              },
+                              {
+                                "trackIndex" : 3,
+                                "medias" : [
+                                  {
+                                    "id" : 13,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-ellipse",
+                                      "style" : "bold",
+                                      "fill-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.235294117647059,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.235294117647059,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.235294117647059,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.298039215686275,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.298039215686275,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.298039215686275,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.905882352941176,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.905882352941176,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.905882352941176,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "height" : {
+                                        "type" : "double",
+                                        "defaultValue" : 12.000000000389,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 673.920000000227,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 800.000000000197,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.777079198166942,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.777079198166942,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.777079198166942,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.93090625,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.93090625,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.93090625,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-opacity" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.0,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.113700037136884,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.113700037136884,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.113700037136884,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-width" : {
+                                        "type" : "double",
+                                        "defaultValue" : 3.2972282606003,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 13.2523923911482,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 15.1486141303002,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "width" : {
+                                        "type" : "double",
+                                        "defaultValue" : 12.000000000389,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 673.920000000227,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 800.000000000197,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.59104729391402e-10,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 1.59104729391402e-10,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 1.59104729391402e-10,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -6.55546728012268e-11,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : -6.55546728012268e-11,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : -6.55546728012268e-11,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 26,
+                                    "duration" : 30,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 30,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+                                      "visual" : [
+                                        {
+                                          "endTime" : 21,
+                                          "duration" : 21,
+                                          "range" : [ 0, 21]
+                                        },
+                                        {
+                                          "endTime" : 25,
+                                          "duration" : 4,
+                                          "range" : [ 21, 4]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "id" : 14,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-rectangle",
+                                      "style" : "abstract",
+                                      "fill-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.725490196078431,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 7,
+                                            "value" : 0.725490196078431,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.501960784313725,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 7,
+                                            "value" : 0.501960784313725,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.16078431372549,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 7,
+                                            "value" : 0.16078431372549,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "height" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1970.84482462071,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 7,
+                                            "value" : 2713.03609938265,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
+                                      "width" : {
+                                        "type" : "double",
+                                        "defaultValue" : 6.44547658048049,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 7,
+                                            "value" : 2256.39114786797,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.45519152283669e-10,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 7,
+                                            "value" : 1.45519152283669e-10,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.32367006244749e-10,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 7,
+                                            "value" : 1.32367006244749e-10,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "rotation2" : {
+                                        "type" : "double",
+                                        "defaultValue" : -0.518985227673131,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 7,
+                                            "value" : -0.518985227673131,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 84,
+                                    "duration" : 18,
+                                    "mediaStart" : 7,
+                                    "mediaDuration" : 18,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+                                      "visual" : [
+                                        {
+                                          "endTime" : 21,
+                                          "duration" : 14,
+                                          "range" : [ 7, 14],
+                                          "interp" : "linr"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "id" : 15,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-rectangle",
+                                      "style" : "urban",
+                                      "fill-color-blue" : 0.725490196078431,
+                                      "fill-color-green" : 0.501960784313725,
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : 0.16078431372549,
+                                      "height" : 1080.00000000011,
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
+                                      "width" : 1920.00002629153,
+                                      "fill-style" : "solid",
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : 1.31458509144977e-05,
+                                      "translation1" : 4.2348347051302e-11
+                                    },
+                                    "effects" : [
+                                        {
+                                          "effectName" : "DropShadow",
+                                          "category" : "categoryVisualEffects",
+                                          "parameters" : {
+                                            "angle" : {
+                                              "type" : "double",
+                                              "defaultValue" : 5.49778714378214,
+                                              "valueBounds" : {
+                                                "minValue" : 0.0,
+                                                "maxValue" : 0.0,
+                                                "defaultValue" : 5.49778714378214
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              }
+                                            },
+                                            "blur" : {
+                                              "type" : "double",
+                                              "defaultValue" : 10.0,
+                                              "valueBounds" : {
+                                                "minValue" : 0.0,
+                                                "maxValue" : 50.0,
+                                                "defaultValue" : 10.0
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              }
+                                            },
+                                            "color-alpha" : {
+                                              "type" : "double",
+                                              "defaultValue" : 1.0,
+                                              "valueBounds" : {
+                                                "minValue" : 0.0,
+                                                "maxValue" : 1.0,
+                                                "defaultValue" : 1.0
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              }
+                                            },
+                                            "color-blue" : {
+                                              "type" : "double",
+                                              "defaultValue" : 0.1216,
+                                              "valueBounds" : {
+                                                "minValue" : 0.0,
+                                                "maxValue" : 1.0,
+                                                "defaultValue" : 0.1216
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              }
+                                            },
+                                            "color-green" : {
+                                              "type" : "double",
+                                              "defaultValue" : 0.1216,
+                                              "valueBounds" : {
+                                                "minValue" : 0.0,
+                                                "maxValue" : 1.0,
+                                                "defaultValue" : 0.1216
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              }
+                                            },
+                                            "color-red" : {
+                                              "type" : "double",
+                                              "defaultValue" : 0.1216,
+                                              "valueBounds" : {
+                                                "minValue" : 0.0,
+                                                "maxValue" : 1.0,
+                                                "defaultValue" : 0.1216
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              }
+                                            },
+                                            "enabled" : {
+                                              "type" : "int",
+                                              "valueBounds" : {
+                                                "minValue" : 0,
+                                                "maxValue" : 1,
+                                                "defaultValue" : 1
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              },
+                                              "keyframes" : [
+                                                {
+                                                  "endTime" : 0,
+                                                  "time" : 0,
+                                                  "value" : 1,
+                                                  "duration" : 0
+                                                }
+                                              ]
+                                            },
+                                            "offset" : {
+                                              "type" : "double",
+                                              "defaultValue" : 10.0,
+                                              "valueBounds" : {
+                                                "minValue" : 0.0,
+                                                "maxValue" : 250.0,
+                                                "defaultValue" : 10.0
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              }
+                                            },
+                                            "opacity" : {
+                                              "type" : "double",
+                                              "defaultValue" : 0.4,
+                                              "valueBounds" : {
+                                                "minValue" : 0.0,
+                                                "maxValue" : 1.0,
+                                                "defaultValue" : 0.4
+                                              },
+                                              "uiHints" : {
+                                                "userInterfaceType" : 0,
+                                                "unitType" : 0
+                                              }
+                                            }
+                                          }
+                                        }
+                                    ],
+                                    "start" : 102,
+                                    "duration" : 168,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 168,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+
+                                    }
+                                  }
+                                ],
+                                "transitions" : [
+                                  {
+                                    "name" : "Fade",
+                                    "duration" : 30,
+                                    "trivial" : false,
+                                    "useAudioPreRoll" : false,
+                                    "useVisualPreRoll" : true,
+                                    "leftMedia" : 15
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+                                  "metadata" : {
+                                    "IsLocked" : "False",
+                                    "WinTrackHeight" : "0"
+                                  }
+                              },
+                              {
+                                "trackIndex" : 4,
+                                "medias" : [
+                                  {
+                                    "id" : 16,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-ellipse",
+                                      "style" : "bold",
+                                      "fill-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.235294117647059,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.235294117647059,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.235294117647059,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.298039215686275,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.298039215686275,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.298039215686275,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.905882352941176,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.905882352941176,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.905882352941176,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "height" : {
+                                        "type" : "double",
+                                        "defaultValue" : 12.000000000389,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 673.920000000227,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 800.000000000197,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.777079198166942,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.777079198166942,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.777079198166942,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.93090625,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.93090625,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.93090625,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-opacity" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.0,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 0.113700037136884,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 0.113700037136884,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 0.113700037136884,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "stroke-width" : {
+                                        "type" : "double",
+                                        "defaultValue" : 3.2972282606003,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 13.2523923911482,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 15.1486141303002,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "width" : {
+                                        "type" : "double",
+                                        "defaultValue" : 12.000000000389,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 673.920000000227,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 800.000000000197,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.59104729391402e-10,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : 1.59104729391402e-10,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : 1.59104729391402e-10,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -6.55546728012268e-11,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 21,
+                                            "time" : 0,
+                                            "value" : -6.55546728012268e-11,
+                                            "duration" : 21
+                                          },
+                                          {
+                                            "endTime" : 25,
+                                            "time" : 21,
+                                            "value" : -6.55546728012268e-11,
+                                            "duration" : 4
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 35,
+                                    "duration" : 30,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 30,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+                                      "visual" : [
+                                        {
+                                          "endTime" : 21,
+                                          "duration" : 21,
+                                          "range" : [ 0, 21]
+                                        },
+                                        {
+                                          "endTime" : 25,
+                                          "duration" : 4,
+                                          "range" : [ 21, 4]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "id" : 17,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-rectangle",
+                                      "style" : "urban",
+                                      "fill-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      },
+                                      "height" : {
+                                        "type" : "double",
+                                        "defaultValue" : 6.861561236135,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1314.7048957085,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
+                                      "width" : 7.99999999997041,
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : -1.00115471468598e-11,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : -1.00115471468598e-11,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -3.00737212910462e-12,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : -3.00737212910462e-12,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      },
+                                      "rotation2" : {
+                                        "type" : "double",
+                                        "defaultValue" : -0.523598775598299,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : -0.523598775598299,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 65,
+                                    "duration" : 11,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 11,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+                                      "visual" : [
+                                        {
+                                          "endTime" : 10,
+                                          "duration" : 10,
+                                          "range" : [ 0, 10]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "id" : 18,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-rectangle",
+                                      "style" : "urban",
+                                      "fill-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : 1.0,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : 1.0,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : 1.0,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "height" : {
+                                        "type" : "double",
+                                        "defaultValue" : 6.861561236135,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1314.7048957085,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
+                                      "width" : 7.99999999997041,
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : -1.00115471468598e-11,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : -1300.00000000008,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -3.00737212910462e-12,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : -3.00737212910462e-12,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : -3.00737212910462e-12,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "rotation2" : {
+                                        "type" : "double",
+                                        "defaultValue" : -0.523598775598299,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : -0.523598775598299,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : -0.523598775598299,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 76,
+                                    "duration" : 24,
+                                    "mediaStart" : 11,
+                                    "mediaDuration" : 24,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+                                      "visual" : [
+                                        {
+                                          "endTime" : 10,
+                                          "duration" : 10,
+                                          "range" : [ 0, 10]
+                                        },
+                                        {
+                                          "endTime" : 33,
+                                          "duration" : 14,
+                                          "range" : [ 19, 14],
+                                          "interp" : "linr"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+                                  "metadata" : {
+                                    "IsLocked" : "False",
+                                    "WinTrackHeight" : "0"
+                                  }
+                              },
+                              {
+                                "trackIndex" : 5,
+                                "medias" : [
+                                  {
+                                    "id" : 19,
+                                    "_type" : "Callout",
+                                    "def" : {
+                                      "kind" : "remix",
+                                      "shape" : "shape-rectangle",
+                                      "style" : "urban",
+                                      "fill-color-blue" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : 1.0,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-green" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : 1.0,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "fill-color-opacity" : 1.0,
+                                      "fill-color-red" : {
+                                        "type" : "double",
+                                        "defaultValue" : 1.0,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1.0,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : 1.0,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "height" : {
+                                        "type" : "double",
+                                        "defaultValue" : 6.861561236135,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : 1314.7048957085,
+                                            "duration" : 10
+                                          }
+                                        ]
+                                      },
+                                      "stroke-color-blue" : 1.0,
+                                      "stroke-color-green" : 1.0,
+                                      "stroke-color-opacity" : 1.0,
+                                      "stroke-color-red" : 1.0,
+                                      "stroke-width" : 0.0,
+                                      "width" : 7.99999999997041,
+                                      "horizontal-alignment" : "center",
+                                      "stroke-style" : "solid",
+                                      "vertical-alignment" : "center",
+                                      "textAttributes" : {
+                                        "type" : "textAttributeList",
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : null,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "attributes" : {
+                                      "autoRotateText" : true
+                                    },
+                                    "parameters" : {
+                                      "translation0" : {
+                                        "type" : "double",
+                                        "defaultValue" : -1.00115471468598e-11,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : 1302.00000000006,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "translation1" : {
+                                        "type" : "double",
+                                        "defaultValue" : -3.00737212910462e-12,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : -3.00737212910462e-12,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : -3.00737212910462e-12,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      },
+                                      "rotation2" : {
+                                        "type" : "double",
+                                        "defaultValue" : -0.523598775598299,
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 10,
+                                            "time" : 0,
+                                            "value" : -0.523598775598299,
+                                            "duration" : 10
+                                          },
+                                          {
+                                            "endTime" : 33,
+                                            "time" : 19,
+                                            "value" : -0.523598775598299,
+                                            "duration" : 14
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 76,
+                                    "duration" : 24,
+                                    "mediaStart" : 11,
+                                    "mediaDuration" : 24,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+                                      "visual" : [
+                                        {
+                                          "endTime" : 10,
+                                          "duration" : 10,
+                                          "range" : [ 0, 10]
+                                        },
+                                        {
+                                          "endTime" : 33,
+                                          "duration" : 14,
+                                          "range" : [ 19, 14],
+                                          "interp" : "linr"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+                                  "metadata" : {
+                                    "IsLocked" : "False",
+                                    "WinTrackHeight" : "0"
+                                  }
+                              },
+                              {
+                                "trackIndex" : 6,
+                                "medias" : [
+                                  {
+                                    "id" : 20,
+                                    "_type" : "IMFile",
+                                    "src" : 1,
+                                    "trackNumber" : 0,
+                                    "trimStartSum" : 0,
+                                    "attributes" : {
+                                      "ident" : "Lens-Shadow-001"
+                                    },
+                                    "parameters" : {
+                                      "opacity" : 0.5
+                                    },
+                                    "effects" : [
+
+                                    ],
+                                    "start" : 0,
+                                    "duration" : 270,
+                                    "mediaStart" : 0,
+                                    "mediaDuration" : 1,
+                                    "scalar" : 1,
+                                    "metadata" : {
+                                      "WinSubProjectDisplayName" : "",
+                                      "clipSpeedAttribute" : false
+                                    },
+                                    "animationTracks" : {
+
+                                    }
+                                  }
+                                ],
+                                "transitions" : [
+                                  {
+                                    "name" : "Fade",
+                                    "duration" : 30,
+                                    "trivial" : false,
+                                    "useAudioPreRoll" : false,
+                                    "useVisualPreRoll" : true,
+                                    "leftMedia" : 20
+                                  }
+                                ],
+                                  "ident" : "",
+                                  "audioMuted" : false,
+                                  "videoHidden" : false,
+                                  "metadata" : {
+                                    "IsLocked" : "False",
+                                    "WinTrackHeight" : "0"
+                                  }
+                              }
+                            ],
+                            "attributes" : {
+                              "ident" : "Shapes",
+                              "gain" : 1.0,
+                              "mixToMono" : false
+                            },
+                            "effects" : [
+
+                            ],
+                            "start" : 0,
+                            "duration" : 270,
+                            "mediaStart" : 0.0,
+                            "mediaDuration" : 270.0,
+                            "scalar" : 1,
+                            "metadata" : {
+                              "IsGroupExpanded" : "False",
+                              "WinSubProjectDisplayName" : "Shapes",
+                              "clipSpeedAttribute" : false,
+                              "effectApplied" : "none",
+                              "isOpen" : false
+                            },
+                            "animationTracks" : {
+
+                            }
+                          }
+                        ],
+                          "ident" : "",
+                          "audioMuted" : false,
+                          "videoHidden" : false,
+                          "metadata" : {
+                            "IsLocked" : "False",
+                            "WinTrackHeight" : "0"
+                          }
+                      },
+                      {
+                        "trackIndex" : 1,
+                        "medias" : [
+                          {
+                            "id" : 21,
+                            "_type" : "Callout",
+                            "def" : {
+                              "kind" : "remix",
+                              "shape" : "text",
+                              "style" : "basic",
+                              "height" : 72.0000000001311,
+                              "line-spacing" : 0.0,
+                              "width" : 1153.09090909266,
+                              "word-wrap" : 1.0,
+                              "horizontal-alignment" : "center",
+                              "text" : "Difference Between EWM, WM and Inventory Mgt",
+                              "vertical-alignment" : "center",
+                              "font" : {
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
+                                "name" : "Montserrat",
+                                "weight" : "Regular"
+                              },
+                              "textAttributes" : {
+                                "type" : "textAttributeList",
+                                "keyframes" : [
+                                  {
+                                    "endTime" : 0,
+                                    "time" : 0,
+                                    "value" : [{"name":"kerning","rangeEnd":44,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fontItalic","rangeEnd":44,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fgColor","rangeEnd":44,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"},{"name":"fontName","rangeEnd":44,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"strikethrough","rangeEnd":44,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontSize","rangeEnd":44,"rangeStart":0,"value":51,"valueType":"double"},{"name":"fontWeight","rangeEnd":44,"rangeStart":0,"value":400,"valueType":"int"},{"name":"underline","rangeEnd":44,"rangeStart":0,"value":0,"valueType":"int"}],
+                                    "duration" : 0
+                                  }
+                                ]
+                              }
+                            },
+                            "attributes" : {
+                              "autoRotateText" : true
+                            },
+                            "parameters" : {
+                              "translation0" : 0.454545453540789,
+                              "translation1" : -123.000000000281
+                            },
+                            "effects" : [
+                                {
+                                  "_type" : "GenericBehaviorEffect",
+                                  "effectName" : "pulsating",
+                                  "start" : 0,
+                                  "duration" : 151                                ,
+                                  "in" : {
+                                    "attributes" : {
+                                      "name" : "grow",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : 1,
+                                      "suggestedDurationPerCharacter" : 18,
+                                      "overlapProportion" : "3/4",
+                                      "movement" : 30,
+                                      "springDamping" : 5.0,
+                                      "springStiffness" : 50.0,
+                                      "bounceBounciness" : 0.45
+                                    }
+                                  
+                                  },
+                                  "center" : {
+                                    "attributes" : {
+                                      "name" : "none",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : 0,
+                                      "secondsPerLoop" : 1,
+                                      "numberOfLoops" : -1,
+                                      "delayBetweenLoops" : 0,
+                                      "offsetBetweenCharacters" : 0
+                                    }
+                                  
+                                  },
+                                  "out" : {
+                                    "attributes" : {
+                                      "name" : "none",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : 0,
+                                      "suggestedDurationPerCharacter" : 0,
+                                      "overlapProportion" : 0,
+                                      "movement" : -1,
+                                      "springDamping" : 5.0,
+                                      "springStiffness" : 50.0,
+                                      "bounceBounciness" : 0.45
+                                    }
+                                  
+                                  }
+                                }
+                            ],
+                            "start" : 119,
+                            "duration" : 151,
+                            "mediaStart" : 0,
+                            "mediaDuration" : 151,
+                            "scalar" : 1,
+                            "metadata" : {
+                              "WinSubProjectDisplayName" : "",
+                              "clipSpeedAttribute" : false,
+                              "default-HAlign" : "center",
+                              "default-LineSpace" : 0.0,
+                              "default-VAlign" : "center",
+                              "default-text-attributes" : "[{\"name\":\"fontName\",\"rangeEnd\":17,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"},{\"name\":\"strikethrough\",\"rangeEnd\":17,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fgColor\",\"rangeEnd\":17,\"rangeStart\":0,\"value\":\"(255,255,255,255)\",\"valueType\":\"color\"},{\"name\":\"fontItalic\",\"rangeEnd\":17,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontSize\",\"rangeEnd\":17,\"rangeStart\":0,\"value\":51,\"valueType\":\"double\"},{\"name\":\"fontWeight\",\"rangeEnd\":17,\"rangeStart\":0,\"value\":100,\"valueType\":\"int\"},{\"name\":\"underline\",\"rangeEnd\":17,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"}]",
+                              "effectApplied" : "none"
+                            },
+                            "animationTracks" : {
+
+                            }
+                          }
+                        ],
+                        "transitions" : [
+                          {
+                            "name" : "Fade",
+                            "duration" : 30,
+                            "trivial" : false,
+                            "useAudioPreRoll" : false,
+                            "useVisualPreRoll" : true,
+                            "leftMedia" : 21
+                          }
+                        ],
+                          "ident" : "",
+                          "audioMuted" : false,
+                          "videoHidden" : false,
+                          "metadata" : {
+                            "IsLocked" : "False",
+                            "WinTrackHeight" : "1.03347310004105e-311"
+                          }
+                      },
+                      {
+                        "trackIndex" : 2,
+                        "medias" : [
+                          {
+                            "id" : 22,
+                            "_type" : "Callout",
+                            "def" : {
+                              "kind" : "remix",
+                              "shape" : "text",
+                              "style" : "basic",
+                              "height" : 187.999999999995,
+                              "line-spacing" : 0.0,
+                              "width" : 1920.21538461358,
+                              "word-wrap" : 1.0,
+                              "horizontal-alignment" : "center",
+                              "text" : "Unit 8 - Lesson 2",
+                              "vertical-alignment" : "center",
+                              "font" : {
+                                "color-blue" : 1.0,
+                                "color-green" : 1.0,
+                                "color-red" : 1.0,
+                                "size" : 96.0,
+                                "tracking" : 0.0,
+                                "name" : "Montserrat",
+                                "weight" : "Regular"
+                              },
+                              "textAttributes" : {
+                                "type" : "textAttributeList",
+                                "keyframes" : [
+                                  {
+                                    "endTime" : 0,
+                                    "time" : 0,
+                                    "value" : [{"name":"fontSize","rangeEnd":17,"rangeStart":0,"value":151,"valueType":"double"},{"name":"fontWeight","rangeEnd":17,"rangeStart":0,"value":400,"valueType":"int"},{"name":"fontItalic","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"strikethrough","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":17,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"underline","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":17,"rangeStart":0,"value":0,"valueType":"double"},{"name":"fgColor","rangeEnd":17,"rangeStart":0,"value":"(255,255,255,255)","valueType":"color"}],
+                                    "duration" : 0
+                                  }
+                                ]
+                              }
+                            },
+                            "attributes" : {
+                              "autoRotateText" : true
+                            },
+                            "parameters" : {
+                              "translation0" : 0.284641677673506,
+                              "translation1" : 1.70459202308849e-11
+                            },
+                            "effects" : [
+                                {
+                                  "_type" : "GenericBehaviorEffect",
+                                  "effectName" : "popUp",
+                                  "start" : 2,
+                                  "duration" : 182                                ,
+                                  "in" : {
+                                    "attributes" : {
+                                      "name" : "hinge",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : "3/2",
+                                      "suggestedDurationPerCharacter" : "147/2",
+                                      "overlapProportion" : "1/3",
+                                      "movement" : 30,
+                                      "springDamping" : 5.0,
+                                      "springStiffness" : 50.0,
+                                      "bounceBounciness" : 0.45
+                                    },
+                                    "parameters" : {
+                                      "direction" : {
+                                        "type" : "int",
+                                        "valueBounds" : {
+                                          "minValue" : 0,
+                                          "maxValue" : 3,
+                                          "defaultValue" : 3
+                                        },
+                                        "uiHints" : {
+                                          "userInterfaceType" : 2,
+                                          "unitType" : 0
+                                        },
+                                        "keyframes" : [
+                                          {
+                                            "endTime" : 0,
+                                            "time" : 0,
+                                            "value" : 3,
+                                            "duration" : 0
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  
+                                  },
+                                  "center" : {
+                                    "attributes" : {
+                                      "name" : "none",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : 0,
+                                      "secondsPerLoop" : 1,
+                                      "numberOfLoops" : -1,
+                                      "delayBetweenLoops" : 0,
+                                      "offsetBetweenCharacters" : 0
+                                    }
+                                  
+                                  },
+                                  "out" : {
+                                    "attributes" : {
+                                      "name" : "none",
+                                      "type" : 1,
+                                      "characterOrder" : 6,
+                                      "offsetBetweenCharacters" : 0,
+                                      "suggestedDurationPerCharacter" : 0,
+                                      "overlapProportion" : 0,
+                                      "movement" : -1,
+                                      "springDamping" : 5.0,
+                                      "springStiffness" : 50.0,
+                                      "bounceBounciness" : 0.45
+                                    }
+                                  
+                                  }
+                                }
+                            ],
+                            "start" : 88,
+                            "duration" : 182,
+                            "mediaStart" : 2,
+                            "mediaDuration" : 182,
+                            "scalar" : 1,
+                            "metadata" : {
+                              "WinSubProjectDisplayName" : "",
+                              "clipSpeedAttribute" : false,
+                              "default-HAlign" : "center",
+                              "default-LineSpace" : 0.0,
+                              "default-VAlign" : "center",
+                              "default-text-attributes" : "[{\"name\":\"fontSize\",\"rangeEnd\":9,\"rangeStart\":0,\"value\":151,\"valueType\":\"double\"},{\"name\":\"underline\",\"rangeEnd\":9,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontWeight\",\"rangeEnd\":9,\"rangeStart\":0,\"value\":100,\"valueType\":\"int\"},{\"name\":\"strikethrough\",\"rangeEnd\":9,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontItalic\",\"rangeEnd\":9,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fgColor\",\"rangeEnd\":9,\"rangeStart\":0,\"value\":\"(255,255,255,255)\",\"valueType\":\"color\"},{\"name\":\"fontName\",\"rangeEnd\":9,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"}]",
+                              "effectApplied" : "none"
+                            },
+                            "animationTracks" : {
+
+                            }
+                          }
+                        ],
+                        "transitions" : [
+                          {
+                            "name" : "Fade",
+                            "duration" : 30,
+                            "trivial" : false,
+                            "useAudioPreRoll" : false,
+                            "useVisualPreRoll" : true,
+                            "leftMedia" : 22
+                          }
+                        ],
+                          "ident" : "",
+                          "audioMuted" : false,
+                          "videoHidden" : false,
+                          "metadata" : {
+                            "IsLocked" : "False",
+                            "WinTrackHeight" : "1.03347310004105e-311"
+                          }
+                      },
+                      {
+                        "trackIndex" : 3,
+                        "medias" : [
+                          {
+                            "id" : 23,
+                            "_type" : "Callout",
+                            "def" : {
+                              "kind" : "remix",
+                              "shape" : "text-rectangle",
+                              "style" : "basic",
+                              "fill-color-blue" : 0.235294117647059,
+                              "fill-color-green" : 0.298039215686275,
+                              "fill-color-opacity" : 1.0,
+                              "fill-color-red" : 0.901960784313726,
+                              "height" : 83.9999999998924,
+                              "line-spacing" : 0.0,
+                              "stroke-color-blue" : 0.777079198166942,
+                              "stroke-color-green" : 0.93090625,
+                              "stroke-color-opacity" : 1.0,
+                              "stroke-color-red" : 0.113700037136884,
+                              "stroke-width" : 0.0,
+                              "width" : 732.000000000374,
+                              "word-wrap" : 1.0,
+                              "horizontal-alignment" : "left",
+                              "stroke-style" : "solid",
+                              "text" : "",
+                              "vertical-alignment" : "center",
+                              "font" : {
+                                "color-blue" : 0.266666666666667,
+                                "color-green" : 0.231372549019608,
+                                "color-opacity" : 1.0,
+                                "color-red" : 0.184313725490196,
+                                "size" : 64.0,
+                                "tracking" : 0.0,
+                                "name" : "Montserrat",
+                                "weight" : "Regular"
+                              },
+                              "textAttributes" : {
+                                "type" : "textAttributeList",
+                                "keyframes" : [
+                                  {
+                                    "endTime" : 0,
+                                    "time" : 0,
+                                    "value" : [{"name":"strikethrough","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontItalic","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"kerning","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"double"},{"name":"underline","rangeEnd":1,"rangeStart":0,"value":0,"valueType":"int"},{"name":"fontName","rangeEnd":1,"rangeStart":0,"value":"Montserrat","valueType":"string"},{"name":"fgColor","rangeEnd":1,"rangeStart":0,"value":"(46,59,68,255)","valueType":"color"},{"name":"fontSize","rangeEnd":1,"rangeStart":0,"value":64,"valueType":"double"},{"name":"fontWeight","rangeEnd":1,"rangeStart":0,"value":400,"valueType":"int"}],
+                                    "duration" : 0
+                                  }
+                                ]
+                              }
+                            },
+                            "attributes" : {
+                              "autoRotateText" : true
+                            },
+                            "parameters" : {
+                              "translation0" : -80.999999999634,
+                              "translation1" : 145.999999999818
+                            },
+                            "effects" : [
+
+                            ],
+                            "start" : 91,
+                            "duration" : 179,
+                            "mediaStart" : 0,
+                            "mediaDuration" : 179,
+                            "scalar" : 1,
+                            "metadata" : {
+                              "WinSubProjectDisplayName" : "",
+                              "clipSpeedAttribute" : false,
+                              "default-HAlign" : "left",
+                              "default-LineSpace" : 0.0,
+                              "default-VAlign" : "center",
+                              "default-text-attributes" : "[{\"name\":\"fontName\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":\"Montserrat\",\"valueType\":\"string\"},{\"name\":\"underline\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fontItalic\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"},{\"name\":\"fgColor\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":\"(255,255,255,255)\",\"valueType\":\"color\"},{\"name\":\"fontSize\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":64,\"valueType\":\"double\"},{\"name\":\"fontWeight\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":700,\"valueType\":\"int\"},{\"name\":\"strikethrough\",\"rangeEnd\":8,\"rangeStart\":0,\"value\":0,\"valueType\":\"int\"}]",
+                              "effectApplied" : "none"
+                            },
+                            "animationTracks" : {
+
+                            }
+                          }
+                        ],
+                        "transitions" : [
+                          {
+                            "name" : "Fade",
+                            "duration" : 30,
+                            "trivial" : false,
+                            "useAudioPreRoll" : false,
+                            "useVisualPreRoll" : true,
+                            "leftMedia" : 23
+                          }
+                        ],
+                          "ident" : "",
+                          "audioMuted" : false,
+                          "videoHidden" : false,
+                          "metadata" : {
+                            "IsLocked" : "False",
+                            "WinTrackHeight" : "1.03347310004105e-311"
+                          }
+                      }
+                    ],
+                    "attributes" : {
+                      "ident" : "linewipe",
+                      "gain" : 1.0,
+                      "mixToMono" : false,
+                      "assetProperties" : [
+                        {
+                          "type" : 0,
+                          "name" : "Title",
+                          "objects" : [ 22 ],
+                          "themeMappings" :  {
+                            "font-color" : "foreground-1",
+                            "font-family" : "font-1"
+                          }
+                        },
+                        {
+                          "type" : 0,
+                          "name" : "Subtitle",
+                          "objects" : [ 23 ],
+                          "themeMappings" :  {
+                            "font-color" : "foreground-1",
+                            "font-family" : "font-1"
+                          }
+                        },
+                        {
+                          "type" : 0,
+                          "name" : "Subtitle 2",
+                          "objects" : [ 21 ],
+                          "themeMappings" :  {
+                            "font-color" : "foreground-1",
+                            "font-family" : "font-1"
+                          }
+                        },
+                        {
+                          "type" : 1,
+                          "name" : "Color 1",
+                          "objects" : [ 23, 10, 12, 13, 16 ],
+                          "themeMappings" :  {
+                            "fill" : "accent-1",
+                            "outline" : "foreground-1"
+                          }
+                        },
+                        {
+                          "type" : 1,
+                          "name" : "Color 2",
+                          "objects" : [ 11, 14, 15 ],
+                          "themeMappings" :  {
+                            "fill" : "background-1"
+                          }
+                        }
+                      ]
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 270,
+                    "mediaStart" : 0.0,
+                    "mediaDuration" : 270.0,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "AppliedThemeId" : "",
+                      "IsGroupExpanded" : "False",
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false,
+                      "effectApplied" : "none",
+                      "isOpen" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  },
+                  {
+                    "id" : 24,
+                    "_type" : "AMFile",
+                    "src" : 3,
+                    "trackNumber" : 1,
+                    "attributes" : {
+                      "ident" : "Rec 05-29-19_008",
+                      "sampleRate" : 44100,
+                      "bitDepth" : 16,
+                      "gain" : 1.0,
+                      "mixToMono" : false
+                    },
+                      "channelNumber" : "0,1",
+                    "effects" : [
+
+                    ],
+                    "start" : 270,
+                    "duration" : 12181,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 12181,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 2,
+                "medias" : [
+                  {
+                    "id" : 25,
+                    "_type" : "AMFile",
+                    "src" : 2,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "14 From _1941__ Swing, swing, swing",
+                      "sampleRate" : 44100,
+                      "bitDepth" : 16,
+                      "gain" : 1.0,
+                      "mixToMono" : false
+                    },
+                      "channelNumber" : "0,1",
+                    "parameters" : {
+                      "volume" : {
+                        "type" : "double",
+                        "keyframes" : [
+                          {
+                            "endTime" : 0,
+                            "time" : 0,
+                            "value" : 0.686813186813187,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 174,
+                            "time" : 174,
+                            "value" : 0.686813186813187,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 264,
+                            "time" : 264,
+                            "value" : 0.0,
+                            "duration" : 0
+                          },
+                          {
+                            "endTime" : 265,
+                            "time" : 265,
+                            "value" : 0.686813186813187,
+                            "duration" : 0
+                          }
+                        ]
+                      }
+                    },
+                    "effects" : [
+
+                    ],
+                    "start" : 0,
+                    "duration" : 264,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 264,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 3,
+                "medias" : [
+                ]
+              },
+              {
+                "trackIndex" : 4,
+                "medias" : [
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      }
+    ],
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 64,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 0,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "C:\\Users\\rhigh\\AppData\\Local\\TechSmith\\Camtasia Studio\\19.0\\Auto-Saves\\Untitled Project1f8c92b8.autosave.tscproj",
+    "CanvasZoom" : 49,
+    "Date" : "2019-05-29 10:47:13 AM",
+    "IsAutoSave" : "0",
+    "Language" : "ENU",
+    "ProfileName" : "MP4 only (up to 720p)",
+    "Title" : "Difference between EWM, WM and IM",
+    "audioNarrationNotes" : ""
+  }
+}

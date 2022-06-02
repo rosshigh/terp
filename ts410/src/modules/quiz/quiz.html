@@ -1,0 +1,34 @@
+<template>
+    <div class="container">
+    <div class="row">
+        <div class="col col-lg-3" style="margin-top:20px;">
+            <h3>Unit</h3>
+            <select value.bind="selectedUnit" class="form-control" change.trigger="selectQuiz()">
+                <option value=""></option>
+                <option repeat.for="unit of quiz.quizzesArray" value="${unit._id}">${unit.name}</option>
+            </select>
+        </div>
+        <div show.bind="selectedUnit !== ''" class="col col-lg-8" style="margin-top:20px;">
+
+            <div class="btn-group" role="group">
+                <Button class="btn btn-primary" click.trigger="previous()" disable.bind="questionIndex == 0">Previous</Button>
+                <Button style="margin-left:10px;" class="btn btn-primary" click.trigger="next()" disable.bind="questionIndex == quiz.questionArray.length - 1">Next</Button>
+                <Button style="margin-left:10px;" class="btn btn-primary" click.trigger="showFlashAnswer()">Show Answer</Button>
+            </div>
+            <div class="float-right"> 
+                <span>${questionIndex + 1} of ${quiz.questionArray.length}</span>
+            </div>
+            <div class="card" style="margin-top:20px;">
+                <div class="card-body">
+                    <div innerhtml.bind="currentFlash" ></div>
+                </div>
+            </div>
+            <div class="card  bg-light " style="margin-top:20px;"  show.bind="showCard">
+                <div class="card-body">
+                    <div innerhtml.bind="currentCard"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</template>

@@ -1,0 +1,38 @@
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-3" style="margin-top:20px;">
+                <h3>Unit</h3>
+                <select value.bind="selectedUnit" class="form-control" change.trigger="selectQuiz()">
+                    <option value=""></option>
+                    <option repeat.for="unit of quiz.quizzesArray" value="${unit._id}">${unit.name}</option>
+                </select>
+            </div>
+        </div>
+
+      
+
+        <div style="margin-top:20px;" show.bind="showTable">
+            <button style="margin-bottom:20px;margin-top:20px;" class="btn btn-primary" click.trigger="newQuestion()">New</button>
+            <table class="table">
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr click.trigger="selectQuestion(question)" repeat.for="question of quiz.questionArray">
+                        <td innerhtml.bind='question.flash'></td>
+                        <td innerhtml.bind='question.card'></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div show.bind="!showTable">
+            <button style="margin-bottom:20px;margin-top:20px;" class="btn btn-primary" click.trigger="saveQuestion()">Save</button>
+            <button style="margin-bottom:20px;margin-top:20px;" class="btn btn-primary" click.trigger="back()">Back</button>
+            <button style="margin-bottom:20px;margin-top:20px;" class="btn btn-primary" click.trigger="deleteQuestion()">Delete</button>
+            <editor  toolbar.bind="toolbar" value.bind="quiz.selectedQuestion.flash" height="250"></editor>
+
+            <editor  toolbar.bind="toolbar" value.bind="quiz.selectedQuestion.card" height="250"></editor>
+        </div>
+    </div>
+</template>

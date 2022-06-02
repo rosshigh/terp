@@ -311,4 +311,4 @@ Object.defineProperty(aurelia_pal__WEBPACK_IMPORTED_MODULE_0__.PLATFORM, "Loader
 /***/ })
 
 }]);
-//# sourceMappingURL=vendors-da7e83e9.aa0f62d1ce4b79ce5ccb.bundle.js.map
+//# sourceMappingURL=vendors-da7e83e9.d51903a4bea86fe35daf.bundle.js.map

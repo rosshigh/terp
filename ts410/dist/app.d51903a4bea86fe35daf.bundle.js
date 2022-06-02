@@ -63,10 +63,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var AppConfig = function AppConfig() {
   this.HOST = location.origin;
-  this.BASE_URL = "http://localhost";
+  this.BASE_URL = this.HOST;
   this.screenHeight = $(window).height();
-} // BASE_URL = this.HOST;
-;
+};
 
 /***/ }),
 
@@ -1239,4 +1238,4 @@ module.exports = JSON.parse('{"debug":true,"testing":true}');
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=app.aa0f62d1ce4b79ce5ccb.bundle.js.map
+//# sourceMappingURL=app.d51903a4bea86fe35daf.bundle.js.map
